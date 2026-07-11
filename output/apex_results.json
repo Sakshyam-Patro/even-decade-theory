@@ -1,0 +1,412 @@
+{
+ "escalation": [
+  {
+   "k": 10,
+   "null_pool": 20,
+   "n_fields": 88,
+   "observed_even": 449,
+   "n": 880,
+   "share": 0.5102272727272728,
+   "null_mean_share": 0.5193368749999999,
+   "null_sd_share": 0.01197622577134009,
+   "z": -0.7606404928109368,
+   "p_one_sided": 0.7903,
+   "null_ci95_share": [
+    0.4954545454545455,
+    0.5431818181818182
+   ]
+  },
+  {
+   "k": 5,
+   "null_pool": 10,
+   "n_fields": 93,
+   "observed_even": 232,
+   "n": 465,
+   "share": 0.4989247311827957,
+   "null_mean_share": 0.5138455913978495,
+   "null_sd_share": 0.016252599178098737,
+   "z": -0.9180599393086898,
+   "p_one_sided": 0.8394,
+   "null_ci95_share": [
+    0.4817204301075269,
+    0.546236559139785
+   ]
+  },
+  {
+   "k": 4,
+   "null_pool": 10,
+   "n_fields": 93,
+   "observed_even": 189,
+   "n": 372,
+   "share": 0.5080645161290323,
+   "null_mean_share": 0.5140153225806452,
+   "null_sd_share": 0.01986192297927409,
+   "z": -0.29960877694584803,
+   "p_one_sided": 0.64455,
+   "null_ci95_share": [
+    0.47580645161290325,
+    0.553763440860215
+   ]
+  },
+  {
+   "k": 3,
+   "null_pool": 10,
+   "n_fields": 93,
+   "observed_even": 138,
+   "n": 279,
+   "share": 0.4946236559139785,
+   "null_mean_share": 0.5138093189964158,
+   "null_sd_share": 0.024582910197923163,
+   "z": -0.7804471857875541,
+   "p_one_sided": 0.80195,
+   "null_ci95_share": [
+    0.4659498207885305,
+    0.5627240143369175
+   ]
+  },
+  {
+   "k": 2,
+   "null_pool": 10,
+   "n_fields": 93,
+   "observed_even": 93,
+   "n": 186,
+   "share": 0.5,
+   "null_mean_share": 0.5142760752688171,
+   "null_sd_share": 0.03206761268586905,
+   "z": -0.44518671872035065,
+   "p_one_sided": 0.70495,
+   "null_ci95_share": [
+    0.45161290322580644,
+    0.5752688172043011
+   ]
+  },
+  {
+   "k": 1,
+   "null_pool": 10,
+   "n_fields": 93,
+   "observed_even": 49,
+   "n": 93,
+   "share": 0.5268817204301075,
+   "null_mean_share": 0.513847311827957,
+   "null_sd_share": 0.04841083188475329,
+   "z": 0.2692457058614533,
+   "p_one_sided": 0.43755,
+   "null_ci95_share": [
+    0.41935483870967744,
+    0.6129032258064516
+   ]
+  }
+ ],
+ "goats": {
+  "n": 93,
+  "even": 49,
+  "share": 0.5268817204301075
+ },
+ "escalation_2025": [
+  {
+   "k": 10,
+   "null_pool": 20,
+   "n_fields": 89,
+   "observed_even": 461,
+   "n": 890,
+   "share": 0.5179775280898876,
+   "null_mean_share": 0.5387951123595505,
+   "null_sd_share": 0.011721515876778242,
+   "z": -1.7760146800555916,
+   "p_one_sided": 0.9679,
+   "null_ci95_share": [
+    0.5157303370786517,
+    0.5617977528089888
+   ]
+  },
+  {
+   "k": 5,
+   "null_pool": 10,
+   "n_fields": 94,
+   "observed_even": 256,
+   "n": 470,
+   "share": 0.5446808510638298,
+   "null_mean_share": 0.5188960638297873,
+   "null_sd_share": 0.016117498718790205,
+   "z": 1.599800793157933,
+   "p_one_sided": 0.06435,
+   "null_ci95_share": [
+    0.48723404255319147,
+    0.551063829787234
+   ]
+  },
+  {
+   "k": 4,
+   "null_pool": 10,
+   "n_fields": 94,
+   "observed_even": 208,
+   "n": 376,
+   "share": 0.5531914893617021,
+   "null_mean_share": 0.5190535904255319,
+   "null_sd_share": 0.019657476915002258,
+   "z": 1.736636857506203,
+   "p_one_sided": 0.0461,
+   "null_ci95_share": [
+    0.4787234042553192,
+    0.5558510638297872
+   ]
+  },
+  {
+   "k": 3,
+   "null_pool": 10,
+   "n_fields": 94,
+   "observed_even": 155,
+   "n": 282,
+   "share": 0.549645390070922,
+   "null_mean_share": 0.5189370567375887,
+   "null_sd_share": 0.024376661335074733,
+   "z": 1.2597431990880585,
+   "p_one_sided": 0.11835,
+   "null_ci95_share": [
+    0.4716312056737589,
+    0.5673758865248227
+   ]
+  },
+  {
+   "k": 2,
+   "null_pool": 10,
+   "n_fields": 94,
+   "observed_even": 104,
+   "n": 188,
+   "share": 0.5531914893617021,
+   "null_mean_share": 0.5188526595744681,
+   "null_sd_share": 0.032257486344242345,
+   "z": 1.0645228031961385,
+   "p_one_sided": 0.1638,
+   "null_ci95_share": [
+    0.4574468085106383,
+    0.5797872340425532
+   ]
+  },
+  {
+   "k": 1,
+   "null_pool": 10,
+   "n_fields": 94,
+   "observed_even": 49,
+   "n": 94,
+   "share": 0.5212765957446809,
+   "null_mean_share": 0.5191053191489362,
+   "null_sd_share": 0.04817779993204796,
+   "z": 0.04506798979627832,
+   "p_one_sided": 0.52785,
+   "null_ci95_share": [
+    0.425531914893617,
+    0.6170212765957447
+   ]
+  }
+ ],
+ "rounding_artifact": {
+  "-800..500": {
+   "n": 2756,
+   "pct_ending_0": 0.5990566037735849,
+   "pct_ending_0_or_5": 0.6901306240928883,
+   "share_even_decade": 0.579100145137881
+  },
+  "500..1200": {
+   "n": 2910,
+   "pct_ending_0": 0.38144329896907214,
+   "pct_ending_0_or_5": 0.5147766323024054,
+   "share_even_decade": 0.5278350515463918
+  },
+  "1200..1500": {
+   "n": 2388,
+   "pct_ending_0": 0.25125628140703515,
+   "pct_ending_0_or_5": 0.3706030150753769,
+   "share_even_decade": 0.4937185929648241
+  },
+  "1500..1700": {
+   "n": 2799,
+   "pct_ending_0": 0.13790639514112182,
+   "pct_ending_0_or_5": 0.23401214719542693,
+   "share_even_decade": 0.5105394783851376
+  },
+  "1700..1989": {
+   "n": 66050,
+   "pct_ending_0": 0.09445874337623013,
+   "pct_ending_0_or_5": 0.19521574564723695,
+   "share_even_decade": 0.5526873580620741
+  }
+ },
+ "religious_philosophy_top25_alltime": [
+  {
+   "name": "Muhammad",
+   "birthyear": 570,
+   "occupation": "RELIGIOUS FIGURE",
+   "even_decade": false,
+   "round_year": true
+  },
+  {
+   "name": "Aristotle",
+   "birthyear": -384,
+   "occupation": "PHILOSOPHER",
+   "even_decade": false,
+   "round_year": false
+  },
+  {
+   "name": "Plato",
+   "birthyear": -427,
+   "occupation": "PHILOSOPHER",
+   "even_decade": false,
+   "round_year": false
+  },
+  {
+   "name": "Jesus",
+   "birthyear": -4,
+   "occupation": "RELIGIOUS FIGURE",
+   "even_decade": false,
+   "round_year": false
+  },
+  {
+   "name": "Socrates",
+   "birthyear": -470,
+   "occupation": "PHILOSOPHER",
+   "even_decade": false,
+   "round_year": true
+  },
+  {
+   "name": "Martin Luther",
+   "birthyear": 1483,
+   "occupation": "RELIGIOUS FIGURE",
+   "even_decade": true,
+   "round_year": false
+  },
+  {
+   "name": "Moses",
+   "birthyear": -1393,
+   "occupation": "RELIGIOUS FIGURE",
+   "even_decade": true,
+   "round_year": false
+  },
+  {
+   "name": "Abraham",
+   "birthyear": -1813,
+   "occupation": "RELIGIOUS FIGURE",
+   "even_decade": true,
+   "round_year": false
+  },
+  {
+   "name": "Confucius",
+   "birthyear": -551,
+   "occupation": "PHILOSOPHER",
+   "even_decade": true,
+   "round_year": false
+  },
+  {
+   "name": "Gautama Buddha",
+   "birthyear": -566,
+   "occupation": "PHILOSOPHER",
+   "even_decade": false,
+   "round_year": false
+  },
+  {
+   "name": "Mary, mother of Jesus",
+   "birthyear": -100,
+   "occupation": "RELIGIOUS FIGURE",
+   "even_decade": true,
+   "round_year": true
+  },
+  {
+   "name": "Immanuel Kant",
+   "birthyear": 1724,
+   "occupation": "PHILOSOPHER",
+   "even_decade": true,
+   "round_year": false
+  },
+  {
+   "name": "Saint Peter",
+   "birthyear": -1,
+   "occupation": "RELIGIOUS FIGURE",
+   "even_decade": false,
+   "round_year": false
+  },
+  {
+   "name": "Ren\u00e9 Descartes",
+   "birthyear": 1596,
+   "occupation": "PHILOSOPHER",
+   "even_decade": false,
+   "round_year": false
+  },
+  {
+   "name": "Avicenna",
+   "birthyear": 980,
+   "occupation": "PHILOSOPHER",
+   "even_decade": true,
+   "round_year": true
+  },
+  {
+   "name": "Paul the Apostle",
+   "birthyear": 5,
+   "occupation": "RELIGIOUS FIGURE",
+   "even_decade": true,
+   "round_year": true
+  },
+  {
+   "name": "Jean-Jacques Rousseau",
+   "birthyear": 1712,
+   "occupation": "PHILOSOPHER",
+   "even_decade": false,
+   "round_year": false
+  },
+  {
+   "name": "Pope Francis",
+   "birthyear": 1936,
+   "occupation": "RELIGIOUS FIGURE",
+   "even_decade": false,
+   "round_year": false
+  },
+  {
+   "name": "Friedrich Nietzsche",
+   "birthyear": 1844,
+   "occupation": "PHILOSOPHER",
+   "even_decade": true,
+   "round_year": false
+  },
+  {
+   "name": "Niccol\u00f2 Machiavelli",
+   "birthyear": 1469,
+   "occupation": "PHILOSOPHER",
+   "even_decade": true,
+   "round_year": false
+  },
+  {
+   "name": "Augustine of Hippo",
+   "birthyear": 354,
+   "occupation": "PHILOSOPHER",
+   "even_decade": false,
+   "round_year": false
+  },
+  {
+   "name": "John the Baptist",
+   "birthyear": -20,
+   "occupation": "RELIGIOUS FIGURE",
+   "even_decade": true,
+   "round_year": true
+  },
+  {
+   "name": "John Locke",
+   "birthyear": 1632,
+   "occupation": "PHILOSOPHER",
+   "even_decade": false,
+   "round_year": false
+  },
+  {
+   "name": "Francis Bacon",
+   "birthyear": 1561,
+   "occupation": "PHILOSOPHER",
+   "even_decade": true,
+   "round_year": false
+  },
+  {
+   "name": "Pythagoras",
+   "birthyear": -570,
+   "occupation": "PHILOSOPHER",
+   "even_decade": false,
+   "round_year": true
+  }
+ ]
+}

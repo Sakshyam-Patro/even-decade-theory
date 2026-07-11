@@ -1,0 +1,94 @@
+occupation,name,birthyear,even_decade
+ACTOR,Charlie Chaplin,1889,True
+AMERICAN FOOTBALL PLAYER,O. J. Simpson,1947,True
+ANTHROPOLOGIST,Bronisław Malinowski,1884,True
+ARCHAEOLOGIST,Heinrich Schliemann,1822,True
+ARCHITECT,Antoni Gaudí,1852,False
+ARTIST,Hokusai,1760,True
+ASTRONAUT,Yuri Gagarin,1934,False
+ASTRONOMER,Anders Celsius,1701,True
+ATHLETE,Jesse Owens,1913,False
+BADMINTON PLAYER,Lin Dan,1983,True
+BASEBALL PLAYER,Babe Ruth,1895,False
+BASKETBALL PLAYER,Michael Jordan,1963,True
+BIOLOGIST,Charles Darwin,1809,True
+BOXER,Muhammad Ali,1942,True
+BUSINESSPERSON,Bill Gates,1955,False
+CELEBRITY,Wallis Simpson,1896,False
+CHEMIST,Louis Pasteur,1822,True
+CHESS PLAYER,Bobby Fischer,1943,True
+COACH,Alex Ferguson,1941,True
+COMEDIAN,Robin Williams,1951,False
+COMIC ARTIST,Stan Lee,1922,True
+COMPANION,Empress Elisabeth of Austria,1837,False
+COMPOSER,Ludwig van Beethoven,1770,False
+COMPUTER SCIENTIST,Alan Turing,1912,False
+CONDUCTOR,Herbert von Karajan,1908,True
+CRICKETER,Don Bradman,1908,True
+CYCLIST,Eddy Merckx,1945,True
+DANCER,Mata Hari,1876,False
+DESIGNER,Steve Jobs,1955,False
+DIPLOMAT,Kofi Annan,1938,False
+ECONOMIST,Karl Marx,1818,False
+ENGINEER,Gustave Eiffel,1832,False
+EXPLORER,James Cook,1728,True
+EXTREMIST,Jack the Ripper,1850,False
+FASHION DESIGNER,Coco Chanel,1883,True
+FENCER,Nedo Nadi,1894,False
+FILM DIRECTOR,Steven Spielberg,1946,True
+GAME DESIGNER,Shigeru Miyamoto,1952,False
+GEOGRAPHER,Alexander von Humboldt,1769,True
+GEOLOGIST,Alfred Wegener,1880,True
+GOLFER,Jack Nicklaus,1940,True
+GYMNAST,Nadia Comăneci,1961,True
+HANDBALL PLAYER,Gheorghe Gruia,1940,True
+HISTORIAN,Alexis de Tocqueville,1805,True
+HOCKEY PLAYER,Viktor Tikhonov,1930,False
+INVENTOR,Thomas Edison,1847,True
+JOURNALIST,Robert Capa,1913,False
+JUDGE,Giovanni Falcone,1939,False
+LAWYER,J. Edgar Hoover,1895,False
+LINGUIST,Ferdinand de Saussure,1857,False
+MAFIOSO,Pablo Escobar,1949,True
+MAGICIAN,Harry Houdini,1874,False
+MARTIAL ARTS,Ip Man,1893,False
+MATHEMATICIAN,Carl Friedrich Gauss,1777,False
+MILITARY PERSONNEL,Charles de Gaulle,1890,False
+MODEL,Behati Prinsloo,1988,True
+MOUNTAINEER,Edmund Hillary,1919,False
+MUSICIAN,Bob Marley,1945,True
+NOBLEMAN,Elizabeth II,1926,True
+OCCULTIST,Rajneesh,1931,False
+PAINTER,Vincent van Gogh,1853,False
+PHILOSOPHER,Immanuel Kant,1724,True
+PHOTOGRAPHER,Nadar,1820,True
+PHYSICIAN,Florence Nightingale,1820,True
+PHYSICIST,Albert Einstein,1879,False
+PILOT,Charles Lindbergh,1902,True
+POKER PLAYER,Doyle Brunson,1933,False
+POLITICAL SCIENTIST,Zygmunt Bauman,1925,True
+POLITICIAN,Napoleon,1769,True
+PORNOGRAPHIC ACTOR,Ilona Staller,1951,False
+PRESENTER,Jay Leno,1950,False
+PRODUCER,Walt Disney,1901,True
+PSYCHOLOGIST,Sigmund Freud,1856,False
+PUBLIC WORKER,Alois Hitler,1837,False
+RACING DRIVER,Niki Lauda,1949,True
+REFEREE,Pierluigi Collina,1960,True
+RELIGIOUS FIGURE,Pope Francis,1936,False
+RUGBY PLAYER,Jonah Lomu,1975,False
+SCULPTOR,Auguste Rodin,1840,True
+SINGER,Elvis Presley,1935,False
+SKATER,Sonja Henie,1912,False
+SKIER,Ingemar Stenmark,1956,False
+SNOOKER,Ronnie O'Sullivan,1975,False
+SOCCER PLAYER,Pelé,1940,True
+SOCIAL ACTIVIST,Che Guevara,1928,True
+SOCIOLOGIST,Max Weber,1864,True
+SWIMMER,Johnny Weissmuller,1904,True
+TABLE TENNIS PLAYER,Jan-Ove Waldner,1965,True
+TENNIS PLAYER,Björn Borg,1956,False
+VOLLEYBALL PLAYER,Karch Kiraly,1960,True
+WRESTLER,Hulk Hogan,1953,False
+WRITER,Johann Wolfgang von Goethe,1749,True
+YOUTUBER,PewDiePie,1989,True

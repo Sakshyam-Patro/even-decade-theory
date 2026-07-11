@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+.DS_Store
+# Raw downloads are large (~85 MB) and reproducible: run.py re-fetches and
+# caches them. Processed parquets are committed so analysis can run offline.
+data/raw/
