@@ -14,8 +14,13 @@ But the road there is the interesting part: the same dataset produced a *statist
 significant* result in **both directions** before it told the truth. This repo is as
 much a case study in alternating-window artifacts as it is a test of the theory.
 
-> Reproduce everything — raw downloads → statistics → all figures — with one command:
+> **Read the story:** [even-decade-theory.vercel.app](https://even-decade-theory.vercel.app) —
+> the full write-up with every chart, all 93 GOATs, and a check-your-own-birth-year widget.
+>
+> **Reproduce everything** — raw downloads → statistics → all figures — with one command:
 > `python run.py`. Every statistical draw is seeded; every number below reproduces exactly.
+
+![The GOAT test: escalation curve is flat and the 93 field GOATs split 49 even / 44 odd](figures/fig9_apex_goats.png)
 
 ---
 
@@ -34,6 +39,7 @@ much a case study in alternating-window artifacts as it is a test of the theory.
 11. [Scorecard](#11-scorecard)
 12. [Repository layout & reproduction](#12-repository-layout--reproduction)
 13. [Limitations](#13-limitations)
+14. [Data credits](#14-data-credits)
 
 ---
 
@@ -254,7 +260,7 @@ All pre-registered, all in [`output/results.json`](output/results.json):
 - **Fame-weighted.** HPI-weighting the entire population shifts the even share by
   −1.4pp (bootstrap CI −1.5 to −1.3) — the era artifact again; gone under trend control.
 - **Temporal stability.** Within every birth half-century the top-1000 tracks its era's
-  pool share with small, sign-alternating gaps (1700–49: 58.5% vs 62.2%; 1750–99: 40.4%
+  pool share with small, mixed-sign gaps (1700–49: 58.5% vs 62.2%; 1750–99: 40.4%
   vs 38.4%; 1800–49: 56.2% vs 58.7%; 1850–99: 39.7% vs 40.8%; 1900–49: 60.6% vs 63.1%).
   No era shows a consistent parity effect.
 - **Greats-per-birth over time** — long waves, no alternating rhythm:
@@ -270,7 +276,7 @@ All pre-registered, all in [`output/results.json`](output/results.json):
 | Six domains, sports → science | every CI crosses 1 |
 | Every fame cutoff (top-100 → top-50,000) | no pro-even signal |
 | Every birth half-century, 1700–1989 | tracks baseline |
-| 990 Nobel laureates, 6 categories | 52.4% vs 53.4% expected |
+| 990 Nobel prize wins, 6 categories | 52.4% vs 53.4% expected |
 | The #1 GOAT of 93 fields | 49 even / 44 odd |
 | Escalation top-10 → top-1 | flat |
 | Fame-intensity weighting | artifact only |
@@ -290,6 +296,7 @@ Kobe, and Brady. Base-rate neglect does the rest — half of everyone is a "hit.
 ├── PLAN.md                 # pipeline design
 ├── DECISIONS.md            # every judgment call, D1–D10, including disclosed errors
 ├── run.py                  # one command: fetch → clean → analyze → figures
+├── index.html              # the website (deployed at even-decade-theory.vercel.app)
 ├── src/
 │   ├── fetch_pantheon.py   # Pantheon 2020 + 2025 person datasets (cached)
 │   ├── fetch_occupations.py# occupation → domain mapping (api.pantheon.world)
@@ -301,7 +308,8 @@ Kobe, and Brady. Base-rate neglect does the rest — half of everyone is a "hit.
 │   │                       #   GLM, per-field+BH, Bayesian, weighted, temporal)
 │   ├── apex.py             # GOAT test, escalation curve, ancients artifact
 │   ├── figures.py          # figures 1–8 (PNG + SVG)
-│   └── fig_apex.py         # figure 9
+│   ├── fig_apex.py         # figure 9
+│   └── build_site.py       # injects the GOAT table into index.html from the CSV
 ├── data/
 │   ├── raw/                # ~85 MB of downloads — gitignored, re-fetched by run.py
 │   └── processed/          # committed parquets (~9 MB) so analysis runs offline
@@ -316,7 +324,7 @@ Kobe, and Brady. Base-rate neglect does the rest — half of everyone is a "hit.
 
 ```bash
 python3 -m venv .venv
-.venv/bin/pip install pandas numpy scipy matplotlib requests pyarrow
+.venv/bin/pip install -r requirements.txt
 .venv/bin/python run.py          # full pipeline (downloads ~85 MB once, then offline)
 ```
 
@@ -337,3 +345,22 @@ Seeds are fixed (42), so all numbers reproduce bit-for-bit.
   direction-symmetric: each could have rescued the theory exactly as easily as buried
   it. The pre-registered tests alone already refute.
 - Nothing here speaks to post-1989 cohorts. The null's prediction: they'll coin-flip too.
+
+## 14. Data credits
+
+This project stands on other people's open data — cite them, not this repo, for the
+underlying facts:
+
+- **MIT Pantheon** ([pantheon.world](https://pantheon.world)) — person records and the
+  HPI fame metric. Yu, Ronen, Hu, Lu & Hidalgo, *"Pantheon 1.0, a manually verified
+  dataset of globally famous biographies"*, Scientific Data 3, 150075 (2016).
+- **Wikidata** ([wikidata.org](https://www.wikidata.org)) — birth dates and sitelink
+  counts, CC0.
+- **Nobel Prize API** ([nobelprize.org](https://www.nobelprize.org/organization/developer-zone-2/)) —
+  laureate records.
+- **Our World in Data** ([ourworldindata.org](https://ourworldindata.org)) — world
+  births (UN World Population Prospects) and population (HYDE/UN).
+
+The parquet files in `data/processed/` are cleaned derivatives of these sources,
+redistributed here for reproducibility; check each source's license before reusing
+them outside this analysis.
