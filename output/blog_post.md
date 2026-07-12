@@ -55,7 +55,7 @@ curve and then asks whether an alternating even-odd signal remains on top of it.
 It does not. Odds ratio 0.990, confidence interval 0.87 to 1.12. Being born in an
 even decade does nothing to your odds of all-time greatness. The same null holds in
 the 2025 dataset (OR 1.04), in Wikidata (OR 1.06), in every field from sports to
-science, at every fame cutoff, in every century, and among Nobel laureates (52.4%
+science, at every fame cutoff, in every half-century since 1700, and among Nobel laureates (52.4%
 even-decade, expected 53.4%). The strongest version of my theory, that the top of
 the top is where the effect lives, is where it is deadest: Beethoven (1770) and
 Mozart (1756), the two highest-ranked musicians in the dataset, are both odd-decade.
@@ -87,9 +87,10 @@ Newton (1643) and the great religious teachers were part of my original hunch. I
 turns out 60% of recorded birth years before 500 CE end in 0, versus 9% in modern
 data. Ancient birth years are estimates rounded to round numbers, and a year ending
 in 0 always lands in an even decade. So ancient data fakes evidence FOR the theory
-mechanically. Where the years are reliable, the apex ancients split like coin flips
-too: Muhammad, Jesus, Aristotle, Plato, and the Buddha are all odd-decade.
-Confucius, Moses, and Luther are even.
+mechanically. Taking the recorded years at face value, the apex ancients still split like
+coin flips: Muhammad, Aristotle, and Plato odd, Confucius and Luther even. And
+most ancient birth years (Moses, the Buddha, Jesus) are tradition or estimates
+anyway, so antiquity cannot testify either way.
 
 ## What I actually learned
 

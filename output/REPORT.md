@@ -126,7 +126,7 @@ No prize category deviates (all p ≥ 0.36).
 Naively, Sports shows a striking −8.1pp gap (BH-significant) — top athletes appear to
 *avoid* even decades. It is the same era artifact in miniature: sports fame is
 concentrated in recent, even-heavy decades, and the all-time greats skew earlier.
-Trend-controlled, Sports gives OR 1.11 (CI 0.93–1.34), and **every domain's CI crosses
+Trend-controlled, Sports gives OR 1.11 (CI 0.93–1.33), and **every domain's CI crosses
 1** (Arts 1.18, Public Figure 1.14, Sports 1.11, Science 1.10, Humanities 1.10,
 Institutions 1.06) (fig5). The heatmap (fig6) shows why the naive numbers wobble:
 entire decade-columns move together across all fields — eras get over- or
@@ -154,8 +154,8 @@ effect.
 
 **The Even-Decade Theory is refuted.** The tightest honest statement: among people
 famous enough to enter Pantheon, being born in an even decade multiplies the odds of
-top-1000 eminence by 0.99 (CI 0.87–1.12) — indistinguishable from nothing, with enough
-data to have detected a ±13% effect.
+top-1000 eminence by 0.99 (CI 0.87–1.12) — indistinguishable from nothing, and the
+confidence interval rules out anything beyond a ±13% effect.
 
 ## 6. The apex steelman: testing the theory where it lives
 
@@ -186,10 +186,11 @@ designed *in the theory's favor* (DECISIONS.md D10):
   0** — because they are estimates rounded to round numbers — versus 9.4% for
   post-1700 births. A year ending in 0 always lands in an even decade, so ancient
   data mechanically favors the theory regardless of truth (even-decade share 57.9%
-  pre-500 CE, falling to ~50% exactly as record-keeping improves). Where the years
-  are believed reliable, the apex ancients split like everyone else: Muhammad,
-  Jesus, Aristotle, Plato, the Buddha odd-decade; Confucius, Moses, Luther
-  even-decade.
+  pre-500 CE, falling to ~50% exactly as record-keeping improves). Taking the
+  recorded years at face value, the apex ancients still split (Muhammad,
+  Aristotle, Plato odd-decade; Confucius, Luther even-decade), but most ancient
+  birth years — Moses, Abraham, the Buddha, Jesus — are tradition or scholarly
+  estimates, so antiquity cannot testify either way.
 
 The apex is where the theory had its last, best chance. It is null there too.
 

@@ -6,8 +6,8 @@ Jordan 1963. LeBron 1984. Bolt 1986. Messi 1987. Pelé 1940. Napoleon 1769. Newt
 
 **Verdict: refuted.** After controlling for *when* people were born, an even-decade
 birth multiplies the odds of top-1000 all-time eminence by **0.99** (95% CI 0.87–1.12).
-The null replicates in four datasets, all six domains, every century, every fame
-threshold, all ten decade boundaries, and at the GOAT tier itself: the #1 of each of
+The null replicates in four datasets, all six domains, every half-century since 1700,
+every fame threshold, all ten decade boundaries, and at the GOAT tier itself: the #1 of each of
 93 fields splits **49 even / 44 odd**.
 
 But the road there is the interesting part: the same dataset produced a *statistically
@@ -158,8 +158,8 @@ signal that *alternates decade-by-decade* — which is what the theory claims.
 | stability | z = −0.22 / −0.16 / −0.09 at poly degree 3 / 5 / 8 |
 | offset test, trend-controlled | offset 0 ranks 3/10; no offset reaches \|z\| = 1.4 |
 
-With n = 67,198 this had the power to detect a ±13% odds shift. The point estimate is
-−1%.
+With n = 67,198, the confidence interval rules out any effect larger than about
+±13%. The point estimate is −1%.
 
 ## 6. Replications
 
@@ -184,7 +184,7 @@ skew earlier). Trend-controlled, it evaporates — and every domain's CI crosses
 |---|---:|---|
 | Arts | +1.7pp | 1.18 (0.99–1.42) |
 | Public Figure | −1.6pp | 1.14 (0.90–1.45) |
-| Sports | **−8.1pp (BH-sig!)** | 1.11 (0.93–1.34) |
+| Sports | **−8.1pp (BH-sig!)** | 1.11 (0.93–1.33) |
 | Science & Technology | +1.0pp | 1.10 (0.91–1.33) |
 | Humanities | +1.2pp | 1.10 (0.91–1.32) |
 | Institutions | +1.3pp | 1.06 (0.88–1.26) |
@@ -239,9 +239,11 @@ round numbers, and a year ending in 0 always lands in an even decade**:
 *\*inflated by the 15-even/14-odd window imbalance (D6), which the internal baseline
 absorbs.*
 
-Ancient data mechanically fakes evidence **for** the theory, regardless of truth. Where
-years are believed reliable, the apex ancients coin-flip: Muhammad (570), Jesus,
-Aristotle, Plato, the Buddha — odd; Confucius, Moses, Luther — even.
+Ancient data mechanically fakes evidence **for** the theory, regardless of truth. Taking
+the recorded years at face value the apex ancients still coin-flip (Muhammad 570,
+Aristotle, Plato — odd; Confucius, Luther — even), but most ancient birth years (Moses,
+Abraham, the Buddha, Jesus) are tradition or scholarly estimates, so antiquity cannot
+testify either way.
 
 ## 10. Secondary analyses
 
