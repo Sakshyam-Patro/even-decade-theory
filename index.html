@@ -13,14 +13,14 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐐</text></svg>">
 <style>
 :root {
-  --paper: #fbfaf7; --ink: #1c1b18; --ink-2: #55524b; --muted: #8b877d;
-  --accent: #2a78d6; --accent-ink: #1c5cab; --red: #c23a39; --hair: #e5e2da;
-  --band: rgba(42,120,214,.07); --card: #ffffff; --verdict-bg: #eef3fb;
+  --paper: #ffffff; --ink: #111111; --ink-2: #454545; --muted: #767676;
+  --accent: #111111; --accent-ink: #111111; --red: #111111; --hair: #e3e3e3;
+  --band: rgba(0,0,0,.05); --card: #fafafa; --verdict-bg: #f5f5f5;
 }
 @media (prefers-color-scheme: dark) { :root {
-  --paper: #17181b; --ink: #ecebe6; --ink-2: #b3b0a7; --muted: #7d7a72;
-  --accent: #5b9be4; --accent-ink: #8ab8ec; --red: #e06a69; --hair: #2c2d31;
-  --band: rgba(91,155,228,.09); --card: #202126; --verdict-bg: #1d2430;
+  --paper: #111111; --ink: #ececec; --ink-2: #b8b8b8; --muted: #828282;
+  --accent: #ececec; --accent-ink: #ececec; --red: #ececec; --hair: #2c2c2c;
+  --band: rgba(255,255,255,.07); --card: #1a1a1a; --verdict-bg: #1a1a1a;
 }}
 * { box-sizing: border-box; }
 body {
@@ -29,10 +29,6 @@ body {
   font-size: 1.06rem; line-height: 1.65;
 }
 .wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem 5rem; }
-.ribbon { height: 8px;
-  background: repeating-linear-gradient(90deg,
-    var(--accent) 0 10%, transparent 10% 20%);
-  opacity: .55; }
 header { padding: 3.5rem 0 2rem; border-bottom: 1px solid var(--hair); }
 .eyebrow { font-family: system-ui, -apple-system, sans-serif; font-size: .72rem;
   letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink);
@@ -40,7 +36,7 @@ header { padding: 3.5rem 0 2rem; border-bottom: 1px solid var(--hair); }
 h1 { font-family: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
   font-size: clamp(2.1rem, 5.5vw, 3.1rem); line-height: 1.08; margin: 0 0 1rem;
   font-weight: 700; letter-spacing: -.01em; text-wrap: balance; }
-.dek { font-size: 1.18rem; color: var(--ink-2); margin: 0; max-width: 40rem;
+.dek { font-size: 1.18rem; color: var(--ink-2); margin: 0;
   font-style: italic; }
 .meta { font-family: system-ui, sans-serif; font-size: .8rem; color: var(--muted);
   margin-top: 1.4rem; }
@@ -107,12 +103,11 @@ table.tally td.v { font-weight: 600; }
   line-height: 1.7; }
 code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .88em;
   background: var(--band); padding: .1em .35em; border-radius: 4px; }
-a { color: var(--accent-ink); }
+a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
 
-<div class="ribbon"></div>
 <div class="wrap">
 
 <header>
