@@ -364,3 +364,5 @@ underlying facts:
 The parquet files in `data/processed/` are cleaned derivatives of these sources,
 redistributed here for reproducibility; check each source's license before reusing
 them outside this analysis.
+
+Code, write-ups, and figures: [MIT License](LICENSE).
