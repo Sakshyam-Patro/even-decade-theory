@@ -1,6 +1,6 @@
 # The Even-Decade Theory: a pre-registered autopsy
 
-**Hypothesis:** history's "greats" — the GOATs of every field — are disproportionately
+**Hypothesis:** history's "greats", the GOATs of every field, are disproportionately
 born in *even decades*: birth years whose tens digit is even (1940s, 1960s, 1980s…).
 Jordan 1963. LeBron 1984. Bolt 1986. Messi 1987. Pelé 1940. Napoleon 1769. Newton 1643.
 
@@ -14,10 +14,10 @@ But the road there is the interesting part: the same dataset produced a *statist
 significant* result in **both directions** before it told the truth. This repo is as
 much a case study in alternating-window artifacts as it is a test of the theory.
 
-> **Read the story:** [even-decade-theory.vercel.app](https://even-decade-theory.vercel.app) —
+> **Read the story:** [even-decade-theory.vercel.app](https://even-decade-theory.vercel.app),
 > the full write-up with every chart, all 93 GOATs, and a check-your-own-birth-year widget.
 >
-> **Reproduce everything** — raw downloads → statistics → all figures — with one command:
+> **Reproduce everything**, raw downloads → statistics → all figures, with one command:
 > `python run.py`. Every statistical draw is seeded; every number below reproduces exactly.
 
 ![The GOAT test: escalation curve is flat and the 93 field GOATs split 49 even / 44 odd](figures/fig9_apex_goats.png)
@@ -28,9 +28,9 @@ much a case study in alternating-window artifacts as it is a test of the theory.
 
 1. [The design](#1-the-design)
 2. [The data](#2-the-data)
-3. [Act I — the naive test says the theory is *backwards*](#3-act-i--the-naive-test-says-the-theory-is-backwards)
-4. [Act II — the era-matched test says it's *confirmed*](#4-act-ii--the-era-matched-test-says-its-confirmed)
-5. [Act III — the referee: a trend-controlled GLM](#5-act-iii--the-referee-a-trend-controlled-glm)
+3. [Act I: the naive test says the theory is *backwards*](#3-act-i-the-naive-test-says-the-theory-is-backwards)
+4. [Act II: the era-matched test says it's *confirmed*](#4-act-ii-the-era-matched-test-says-its-confirmed)
+5. [Act III: the referee, a trend-controlled GLM](#5-act-iii-the-referee-a-trend-controlled-glm)
 6. [Replications](#6-replications)
 7. [Per-field results](#7-per-field-results)
 8. [The apex steelman: GOATs and the escalation curve](#8-the-apex-steelman-goats-and-the-escalation-curve)
@@ -49,10 +49,10 @@ Everything that could be gamed was locked **before any data was downloaded**, in
 [`PREREGISTRATION.md`](PREREGISTRATION.md):
 
 - **Groups.** Group A (even decades): years ending 00–09, 20–29, 40–49, 60–69, 80–89.
-  Group B: the rest. Base rate ≈ half, so anecdotes are worthless — ~half of everyone
+  Group B: the rest. Base rate ≈ half, so anecdotes are worthless: ~half of everyone
   you can name is a "hit."
 - **Eligibility window.** Births 1700–1989. Pre-1700 excluded for record reliability
-  (see [the ancients trap](#9-the-ancients-trap) — this exclusion turned out to
+  (see [the ancients trap](#9-the-ancients-trap); this exclusion turned out to
   *protect the theory from fake confirmation*, not from refutation). Post-1989
   excluded because those cohorts haven't had time to be canonized.
 - **Primary test.** Pantheon top-1000 by HPI vs the full eligible famous population
@@ -94,13 +94,13 @@ Where the top-1000 actually sit in time, against both baselines:
 
 *The top-1000 (bars) tracks neither the births-proportional expectation (red dotted)
 nor the famous pool (black): canonization rises to a peak for ~1850–1950 cohorts, then
-collapses for recent births. That trend — not decade parity — drives every naive
+collapses for recent births. That trend, not decade parity, drives every naive
 "effect" below.*
 
-## 3. Act I — the naive test says the theory is *backwards*
+## 3. Act I: the naive test says the theory is *backwards*
 
 Top-1000 by HPI: **514/1000 even-decade (51.4%)** vs pool share 56.0%.
-One-sided (pro-theory) p = 0.999 — total failure. Two-sided p = **0.003**: the greats
+One-sided (pro-theory) p = 0.999, total failure. Two-sided p = **0.003**: the greats
 are significantly *under*-represented in even decades. Permutation z = −2.95:
 
 ![Permutation test](figures/fig3_permutation.png)
@@ -122,17 +122,17 @@ of a birth-year* trend. *Right: after trend control (§5), no offset does anythi
 
 The trend: the top-1000's mean birth year is **1870**; the pool's is **1931**, because
 the famous pool is stuffed with 1970s–80s-born athletes and actors who will never be
-canonized. The 1980s is (a) the pool's largest decade — 11,823 people — and (b) even.
+canonized. The 1980s is (a) the pool's largest decade (11,823 people) and (b) even.
 Era masquerading as parity.
 
-## 4. Act II — the era-matched test says it's *confirmed*
+## 4. Act II: the era-matched test says it's *confirmed*
 
 Control for era, then: compare the top-1000 only against famous people born in the same
 20-year block (each block = one even + one odd decade). Result: **z = +2.63,
 p = 0.005**. Theory confirmed!
 
 For about an hour. The blocks `[1700–1719, 1720–1739, …]` always put the even decade in
-the *older* half — and canonization favors older births *within* blocks too. Shift every
+the *older* half, and canonization favors older births *within* blocks too. Shift every
 block by exactly ten years (odd decade first) and the identical test yields
 **z = −2.74**:
 
@@ -143,7 +143,7 @@ block by exactly ten years (odd decade first) and the identical test yields
 they are zero discoveries.* The mirror reproduces in the 2025 replication
 (+3.36 / −2.07), confirming it's structural.
 
-## 5. Act III — the referee: a trend-controlled GLM
+## 5. Act III: the referee, a trend-controlled GLM
 
 Aggregate by birth year, then fit a binomial GLM:
 
@@ -152,7 +152,7 @@ logit P(in top-1000 | birth year) = poly(year, 5) + β · [even decade]
 ```
 
 The polynomial absorbs the canonization trend at every scale; β can only pick up a
-signal that *alternates decade-by-decade* — which is what the theory claims.
+signal that *alternates decade-by-decade*, which is what the theory claims.
 
 | Quantity | Value |
 |---|---|
@@ -182,9 +182,9 @@ medicine 53.0%, peace 57.3%, physics 54.1% (all p ≥ 0.36, n per category 99–
 ## 7. Per-field results
 
 The naive per-field numbers contain a beautiful cautionary tale: **Sports** shows a
-−8.1pp gap, BH-significant — "top athletes avoid even decades!" It's the era artifact
+−8.1pp gap, BH-significant: "top athletes avoid even decades!" It's the era artifact
 in miniature (sports fame concentrates in recent even-heavy decades; all-time greats
-skew earlier). Trend-controlled, it evaporates — and every domain's CI crosses 1:
+skew earlier). Trend-controlled, it evaporates, and every domain's CI crosses 1:
 
 | Domain | Naive gap (top-500 − pool) | Trend-controlled OR (95% CI) |
 |---|---:|---|
@@ -197,18 +197,18 @@ skew earlier). Trend-controlled, it evaporates — and every domain's CI crosses
 
 ![Per-field forest plot](figures/fig5_forest_fields.png)
 
-Why the naive numbers wobble — whole decade-columns move together across every field
+Why the naive numbers wobble: whole decade-columns move together across every field
 (eras get over/under-canonized wholesale); nothing alternates:
 
 ![Decade × field heatmap](figures/fig6_heatmap.png)
 
 ## 8. The apex steelman: GOATs and the escalation curve
 
-The strongest fair objection: *the theory was never about top-1000 populations — it's
+The strongest fair objection: *the theory was never about top-1000 populations; it's
 about the #1 of each field, and it should intensify toward the top.* Tested, with the
 design tilted pro-theory ([`DECISIONS.md`](DECISIONS.md) D10, [`src/apex.py`](src/apex.py)):
 
-- **GOAT test.** The single highest-HPI person in each of 93 occupations — selected by
+- **GOAT test.** The single highest-HPI person in each of 93 occupations, selected by
   the data, zero human curation ([`output/goat_list.csv`](output/goat_list.csv)).
   Result: **49/93 even-decade (52.7%)** vs 51.4% expected from a within-field-elite
   null. z = +0.27, p = 0.44.
@@ -216,7 +216,7 @@ design tilted pro-theory ([`DECISIONS.md`](DECISIONS.md) D10, [`src/apex.py`](sr
   (2020 primary): 51.0% → 49.9% → 50.8% → 49.5% → 50.0% → 52.7%. Flat. The null here
   draws each field's tier from that same field's top-10/20, so era cancels *by
   construction* (Jordan is compared to LeBron and Kareem, never to Kant).
-- **Disclosure.** In the 2025 replication, the top-4 tier grazes p = 0.046 — 1 of 12
+- **Disclosure.** In the 2025 replication, the top-4 tier grazes p = 0.046: 1 of 12
   uncorrected tier tests (≈1 expected by chance), absent in the primary data, and it
   *fades at top-1* where the theory needs it to peak.
 
@@ -225,13 +225,13 @@ design tilted pro-theory ([`DECISIONS.md`](DECISIONS.md) D10, [`src/apex.py`](sr
 The hits are real: Jordan '63, Pelé '40, Ali '42, Napoleon 1769, Darwin 1809, Edison
 1847, Spielberg '46, Marley '45, Kant 1724. The unremembered misses sit at the same
 rank: Einstein 1879, Beethoven 1770, Gauss 1777, Turing 1912, Elvis 1935, van Gogh
-1853, Freud 1856, Gates 1955, Borg 1956. (Beethoven and Mozart — the #1 and #3 most
-eminent humans in the whole dataset — are both odd-decade.)
+1853, Freud 1856, Gates 1955, Borg 1956. (Beethoven and Mozart, the #1 and #3 most
+eminent humans in the whole dataset, are both odd-decade.)
 
 ## 9. The ancients trap
 
 Extending to antiquity (Newton 1643, the great religious teachers) requires a check
-that turned out to matter enormously — **estimated ancient birth years are rounded to
+that turned out to matter enormously: **estimated ancient birth years are rounded to
 round numbers, and a year ending in 0 always lands in an even decade**:
 
 | Birth era | n | years ending in 0 | even-decade share |
@@ -247,7 +247,7 @@ absorbs.*
 
 Ancient data mechanically fakes evidence **for** the theory, regardless of truth. Taking
 the recorded years at face value the apex ancients still coin-flip (Muhammad 570,
-Aristotle, Plato — odd; Confucius, Luther — even), but most ancient birth years (Moses,
+Aristotle, Plato odd; Confucius, Luther even), but most ancient birth years (Moses,
 Abraham, the Buddha, Jesus) are tradition or scholarly estimates, so antiquity cannot
 testify either way.
 
@@ -258,12 +258,12 @@ All pre-registered, all in [`output/results.json`](output/results.json):
 - **Bayesian.** Beta(1,1)-binomial posterior: P(top-1000 over-represented vs internal
   baseline) = 0.002; the *direction* claim is dead both ways once trend-controlled.
 - **Fame-weighted.** HPI-weighting the entire population shifts the even share by
-  −1.4pp (bootstrap CI −1.5 to −1.3) — the era artifact again; gone under trend control.
+  −1.4pp (bootstrap CI −1.5 to −1.3), the era artifact again; gone under trend control.
 - **Temporal stability.** Within every birth half-century the top-1000 tracks its era's
   pool share with small, mixed-sign gaps (1700–49: 58.5% vs 62.2%; 1750–99: 40.4%
   vs 38.4%; 1800–49: 56.2% vs 58.7%; 1850–99: 39.7% vs 40.8%; 1900–49: 60.6% vs 63.1%).
   No era shows a consistent parity effect.
-- **Greats-per-birth over time** — long waves, no alternating rhythm:
+- **Greats-per-birth over time.** Long waves, no alternating rhythm:
 
 ![Rolling rate of greats per million births](figures/fig8_rolling_rate.png)
 
@@ -271,7 +271,7 @@ All pre-registered, all in [`output/results.json`](output/results.json):
 
 | Where the theory could have shown up | Result |
 |---|---|
-| Top-1000 of humanity, trend-controlled | OR 0.99 (0.87–1.12) — null |
+| Top-1000 of humanity, trend-controlled | OR 0.99 (0.87–1.12), null |
 | All 10 decade boundaries (offset test) | offset 0 unremarkable after trend control |
 | Six domains, sports → science | every CI crosses 1 |
 | Every fame cutoff (top-100 → top-50,000) | no pro-even signal |
@@ -287,12 +287,12 @@ All pre-registered, all in [`output/results.json`](output/results.json):
 What *is* real: an **era effect**. Greatness per birth cohort moves in long waves
 (fig 6, fig 8), some legendary clusters happen to sit in even decades (the 1940s, the
 1980s football generation), and memory keeps the hits while dropping Einstein, Ruth,
-Kobe, and Brady. Base-rate neglect does the rest — half of everyone is a "hit."
+Kobe, and Brady. Base-rate neglect does the rest: half of everyone is a "hit."
 
 ## 12. Repository layout & reproduction
 
 ```
-├── PREREGISTRATION.md      # hypotheses, tests, decision rule — locked before any data
+├── PREREGISTRATION.md      # hypotheses, tests, decision rule, locked before any data
 ├── PLAN.md                 # pipeline design
 ├── DECISIONS.md            # every judgment call, D1–D10, including disclosed errors
 ├── run.py                  # one command: fetch → clean → analyze → figures
@@ -311,7 +311,7 @@ Kobe, and Brady. Base-rate neglect does the rest — half of everyone is a "hit.
 │   ├── fig_apex.py         # figure 9
 │   └── build_site.py       # injects the GOAT table into index.html from the CSV
 ├── data/
-│   ├── raw/                # ~85 MB of downloads — gitignored, re-fetched by run.py
+│   ├── raw/                # ~85 MB of downloads, gitignored, re-fetched by run.py
 │   └── processed/          # committed parquets (~9 MB) so analysis runs offline
 ├── output/
 │   ├── results.json        # every statistic cited anywhere
@@ -341,24 +341,24 @@ Seeds are fixed (42), so all numbers reproduce bit-for-bit.
   birth rate; it only affects the demographic-baseline tests, and parity contrasts are
   insensitive to smooth baseline error.
 - The Wikidata replication is smaller than pre-registered (5,126 vs 15k–25k target; D9).
-- The era-matched test and GLM were added after first results (D7, D8) — disclosed, and
+- The era-matched test and GLM were added after first results (D7, D8), disclosed, and
   direction-symmetric: each could have rescued the theory exactly as easily as buried
   it. The pre-registered tests alone already refute.
 - Nothing here speaks to post-1989 cohorts. The null's prediction: they'll coin-flip too.
 
 ## 14. Data credits
 
-This project stands on other people's open data — cite them, not this repo, for the
+This project stands on other people's open data. Cite them, not this repo, for the
 underlying facts:
 
-- **MIT Pantheon** ([pantheon.world](https://pantheon.world)) — person records and the
+- **MIT Pantheon** ([pantheon.world](https://pantheon.world)): person records and the
   HPI fame metric. Yu, Ronen, Hu, Lu & Hidalgo, *"Pantheon 1.0, a manually verified
   dataset of globally famous biographies"*, Scientific Data 3, 150075 (2016).
-- **Wikidata** ([wikidata.org](https://www.wikidata.org)) — birth dates and sitelink
+- **Wikidata** ([wikidata.org](https://www.wikidata.org)): birth dates and sitelink
   counts, CC0.
-- **Nobel Prize API** ([nobelprize.org](https://www.nobelprize.org/organization/developer-zone-2/)) —
+- **Nobel Prize API** ([nobelprize.org](https://www.nobelprize.org/organization/developer-zone-2/)):
   laureate records.
-- **Our World in Data** ([ourworldindata.org](https://ourworldindata.org)) — world
+- **Our World in Data** ([ourworldindata.org](https://ourworldindata.org)): world
   births (UN World Population Prospects) and population (HYDE/UN).
 
 The parquet files in `data/processed/` are cleaned derivatives of these sources,

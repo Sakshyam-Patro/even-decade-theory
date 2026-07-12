@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Even-Decade Theory: An Autopsy</title>
-<meta name="description" content="A pre-registered test of whether history's GOATs are born in even decades, across 165,000 records of famous people. Verdict: refuted — but it fooled me in both directions first.">
+<meta name="description" content="A pre-registered test of whether history's GOATs are born in even decades, across 165,000 records of famous people. Verdict: refuted. It fooled me in both directions first.">
 <meta property="og:title" content="The Even-Decade Theory: An Autopsy">
 <meta property="og:description" content="I believed the GOATs of every field are born in even decades. I tested it properly. It died twice, came back once, and taught me more than being right would have.">
 <meta property="og:type" content="article">
@@ -191,8 +191,8 @@ first.</p>
 before a single birth year was downloaded:</p>
 
 <p><strong>The bet.</strong> Group A = born in an even decade. Eligibility window:
-births 1700–1989 (older records are unreliable in a way that turns out to matter —
-see <a href="#ancients">the ancients</a> — and post-1989 cohorts haven't had time to
+births 1700–1989 (older records are unreliable in a way that turns out to matter,
+see <a href="#ancients">the ancients</a>, and post-1989 cohorts haven't had time to
 be canonized). Primary test: the top-1000 most eminent humans vs the full famous
 population, one-sided <em>in the theory's favor</em>. The theory survives only if
 (1)&nbsp;the primary test rejects in the predicted direction, (2)&nbsp;the real decade
@@ -208,7 +208,7 @@ replicates in an independent fame metric.</p>
     <tr><td>Nobel laureates (official API)</td><td>sanity check</td><td>990 prize wins</td><td>— (whole list)</td></tr>
   </tbody>
   <caption>Two baselines instead of a naive 50/50: the full famous population
-  (internal — documentation and birth-rate confounds cancel) and world births per
+  (internal: documentation and birth-rate confounds cancel) and world births per
   year (UN 1950+, HYDE population × crude birth rate before).</caption>
 </table></div>
 
@@ -217,7 +217,7 @@ replicates in an independent fame metric.</p>
   <figcaption><b>Where the greats were actually born.</b> The top-1000 (bars) tracks
   neither the births-proportional expectation (red dotted) nor the famous pool
   (black): canonization peaks for ~1850–1950 cohorts, then collapses for recent
-  births. Keep this trend in mind — it is the villain of the whole story.</figcaption>
+  births. Keep this trend in mind. It is the villain of the whole story.</figcaption>
 </figure>
 
 <h2 id="act2"><span class="act">Act II · First death</span>The data said the theory was backwards</h2>
@@ -251,7 +251,7 @@ data said greatness <em>avoids</em> even decades.</p>
 
 <p>So… greatness avoids even decades? No. The pre-registered kill-shot caught the
 lie. There are exactly ten ways to slice years into alternating decade-parity
-groups — boundary at XX00 (the real decade), XX01, XX02, … XX09. A genuine decade
+groups: boundary at XX00 (the real decade), XX01, XX02, … XX09. A genuine decade
 effect must make the real boundary a discontinuous outlier. Instead:</p>
 
 <div class="tbl"><table>
@@ -260,7 +260,7 @@ effect must make the real boundary a discontinuous outlier. Instead:</p>
     <tr><td class="v">Naive gap (pp)</td><td class="v">−4.6</td><td>−4.0</td><td>−4.3</td><td>−3.8</td><td>−3.2</td><td>−1.7</td><td>+0.1</td><td>+1.2</td><td>+2.5</td><td>+3.5</td></tr>
     <tr><td class="v">Trend-controlled z</td><td class="v">−0.16</td><td>−0.13</td><td>−0.91</td><td>−1.19</td><td>−1.35</td><td>−1.07</td><td>−0.45</td><td>−0.31</td><td>−0.20</td><td>0.00</td></tr>
   </tbody>
-  <caption>The naive gap slides smoothly across all ten offsets — the fingerprint of
+  <caption>The naive gap slides smoothly across all ten offsets, the fingerprint of
   a birth-year trend, not a parity effect. After trend control, the real boundary
   ranks a thoroughly unremarkable 3rd of 10 and nothing approaches significance.</caption>
 </table></div>
@@ -277,7 +277,7 @@ athletes and actors born in the 1980s who will never be canonized. The 1980s is
 both the pool's largest decade (11,823 people) and an even one. Era was
 masquerading as parity.</p>
 
-<h2 id="act3"><span class="act">Act III · Resurrection</span>Then the theory came back — at z = +2.63</h2>
+<h2 id="act3"><span class="act">Act III · Resurrection</span>Then the theory came back at z = +2.63</h2>
 
 <p>Fine: control for era. Compare each great only against famous people born in the
 same 20-year window, so every window holds one even and one odd decade. The result
@@ -285,7 +285,7 @@ flipped hard: <strong>z&nbsp;=&nbsp;+2.63, p&nbsp;=&nbsp;0.005</strong>. Confirm
 For about an hour the Even-Decade Theory was empirically alive.</p>
 
 <p>Then one paranoid check. My 20-year windows started on even decades, so the even
-decade was always the <em>older</em> half of each window — and older means more
+decade was always the <em>older</em> half of each window, and older means more
 canonized, even inside a 20-year block. Shift every window by exactly ten years and
 re-run the identical test: <strong>z&nbsp;=&nbsp;−2.74</strong>.</p>
 
@@ -305,7 +305,7 @@ artifacts of one confound wearing two disguises.</div>
 <p>Aggregate everyone by birth year, then fit a regression:
 <code>logit P(top-1000 | year) = smooth polynomial(year) + β·[even decade]</code>.
 The polynomial absorbs the canonization trend at every scale; β can only pick up a
-signal that alternates decade-by-decade — which is exactly what the theory claims
+signal that alternates decade-by-decade, which is exactly what the theory claims
 exists.</p>
 
 <div class="tbl"><table>
@@ -358,7 +358,7 @@ exists.</p>
 <h2 id="fields"><span class="act">Field by field</span>The Sports scare, and why it evaporated</h2>
 
 <p>The naive per-field numbers hide a beautiful cautionary tale. Sports shows a
-−8.1&nbsp;percentage-point gap that survives multiple-comparison correction — "top
+−8.1&nbsp;percentage-point gap that survives multiple-comparison correction: "top
 athletes <em>avoid</em> even decades!" It is the era artifact in miniature: sports
 fame concentrates in recent, even-heavy decades, while the all-time greats skew
 earlier. Control the trend and it evaporates, along with everything else:</p>
@@ -374,7 +374,7 @@ earlier. Control the trend and it evaporates, along with everything else:</p>
     <tr><td>Institutions</td><td>+1.3 pp</td><td>1.06 (0.88–1.26)</td></tr>
   </tbody>
   <caption>Every trend-controlled confidence interval crosses 1. If you squint, all
-  six point estimates lean slightly above 1 — and the pooled estimate is 0.99, which
+  six point estimates lean slightly above 1, and the pooled estimate is 0.99, which
   tells you what the squinting is worth.</caption>
 </table></div>
 
@@ -387,14 +387,14 @@ earlier. Control the trend and it evaporates, along with everything else:</p>
 <figure>
   <div class="frame"><img src="figures/fig6_heatmap.png" alt="Heatmap of over- and under-representation by decade and field"></div>
   <figcaption><b>Why the naive numbers wobble.</b> Whole decade-columns move
-  together across every field — eras get over- or under-canonized wholesale. Nothing
+  together across every field: eras get over- or under-canonized wholesale. Nothing
   alternates. Gray cells: too few people to say anything.</figcaption>
 </figure>
 
 <h2 id="goats"><span class="act">The steelman</span>"But the theory was never about the top-1000. It's about the GOAT."</h2>
 
 <p>My own strongest objection, so it got the most careful test. Take the single most
-eminent person in each of 93 fields — chosen by the data, not by me. Jordan for
+eminent person in each of 93 fields, chosen by the data, not by me. Jordan for
 basketball. Pelé for soccer. Ali for boxing. Einstein for physics. Beethoven for
 composers. Kant for philosophy. Count.</p>
 
@@ -402,7 +402,7 @@ composers. Kant for philosophy. Count.</p>
   <div class="frame"><img src="figures/fig9_apex_goats.png" alt="Escalation curve is flat from top-10 to top-1, and the 93 GOATs split 49 even / 44 odd"></div>
   <figcaption><b>The GOAT test.</b> Left: the theory predicts the even-decade share
   climbs toward the top of each field. It is flat, in both datasets. Right: the #1
-  of all 93 fields — 49 even (blue), 44 odd, vs 51.4% expected (z = +0.27,
+  of all 93 fields: 49 even (blue), 44 odd, vs 51.4% expected (z = +0.27,
   p = 0.44).</figcaption>
 </figure>
 
@@ -416,7 +416,7 @@ composers. Kant for philosophy. Count.</p>
 <span class="chip even">Spielberg <span class="yr">'46</span></span>
 <span class="chip even">Marley <span class="yr">'45</span></span>
 <span class="chip even">Kant <span class="yr">1724</span></span>
-— but —
+but
 <span class="chip">Einstein <span class="yr">1879</span></span>
 <span class="chip">Beethoven <span class="yr">1770</span></span>
 <span class="chip">Gauss <span class="yr">1777</span></span>
@@ -427,8 +427,8 @@ composers. Kant for philosophy. Count.</p>
 <span class="chip">Gates <span class="yr">1955</span></span>
 </p>
 
-<p>The escalation claim — the effect should strengthen from top-10 toward the
-single GOAT — comes out flat, and this design is immune to the era problem because
+<p>The escalation claim (the effect should strengthen from top-10 toward the
+single GOAT) comes out flat, and this design is immune to the era problem because
 each GOAT is compared only against their own field's elite (Jordan against LeBron
 and Kareem, never against Kant):</p>
 
@@ -439,7 +439,7 @@ and Kareem, never against Kant):</p>
     <tr><td class="v">Pantheon 2025</td><td>51.8%</td><td>54.5%</td><td>55.3%</td><td>55.0%</td><td>55.3%</td><td>52.1%</td></tr>
   </tbody>
   <caption>Expected under the within-field null: ~51.4%. Full disclosure: the 2025
-  top-4 tier grazes p = 0.046 — 1 of 12 uncorrected tests (≈1 expected by chance),
+  top-4 tier grazes p = 0.046: 1 of 12 uncorrected tests (≈1 expected by chance),
   unreplicated in the primary data, and it fades at the GOAT tier, exactly where the
   theory needs it to peak. The top-10 tier covers 88 of the 93 fields (its null
   needs 20 people per field).</caption>
@@ -545,15 +545,15 @@ and Kareem, never against Kant):</p>
 <tr class="ev"><td>Youtuber</td><td>PewDiePie</td><td>1989</td><td>even</td></tr>
     </tbody>
     <caption>Selected purely by Historical Popularity Index within each Pantheon
-    occupation — no human curation. Bold = even decade. Disagree with a pick? That's
-    the point of publishing the list: swap in your own GOATs and recount — a handful
+    occupation, with no human curation. Bold = even decade. Disagree with a pick? That's
+    the point of publishing the list: swap in your own GOATs and recount; a handful
     of substitutions cannot move 49-of-93 anywhere interesting.</caption>
   </table></div>
 </details>
 
 <h2 id="ancients"><span class="act">The oldest trap</span>Why the ancients can't testify</h2>
 
-<p>I wanted the great religious teachers and philosophers in the test — Newton
+<p>I wanted the great religious teachers and philosophers in the test: Newton
 (1643) and the ancients were part of the original hunch. But the recorded birth
 years of antiquity carry a fatal artifact: they are <em>estimates rounded to round
 numbers</em>, and a year ending in 0 always lands in an even decade.</p>
@@ -567,7 +567,7 @@ numbers</em>, and a year ending in 0 always lands in an even decade.</p>
     <tr><td>1500 – 1700</td><td>2,799</td><td>13.8%</td><td>51.1%</td></tr>
     <tr><td>1700 – 1989</td><td>66,050</td><td>9.4%</td><td>55.3%*</td></tr>
   </tbody>
-  <caption>*Inflated by the window holding 15 even but 14 odd decades — a
+  <caption>*Inflated by the window holding 15 even but 14 odd decades, a
   pre-registration arithmetic slip, disclosed in the decision log, which the
   internal baseline absorbs. The rounding gradient is the real story: ancient data
   fakes evidence FOR the theory mechanically, and the share of round years falls
@@ -576,7 +576,7 @@ numbers</em>, and a year ending in 0 always lands in an even decade.</p>
 
 <p>Taking the recorded years at face value, the apex ancients still split:
 Muhammad (570), Aristotle, and Plato land odd-decade; Confucius and Luther even.
-But most ancient birth years — Moses, Abraham, the Buddha, Jesus — are tradition or
+But most ancient birth years (Moses, Abraham, the Buddha, Jesus) are tradition or
 scholarly estimates, not records. The honest position is that antiquity simply
 cannot testify either way.</p>
 
@@ -595,12 +595,12 @@ cannot testify either way.</p>
   </tbody>
   <caption>The greats track their own era's parity mix everywhere; the last row's
   gap rests on just 28 people. Note how the pool share itself swings from 38% to
-  63% by era — that swing, not parity, is what every naive test keeps rediscovering.</caption>
+  63% by era; that swing, not parity, is what every naive test keeps rediscovering.</caption>
 </table></div>
 
 <h3>Across fame intensity</h3>
 <p>Weighting every eligible person by their fame score shifts the even-decade share
-by −1.4 pp (bootstrap CI −1.5 to −1.3) — the era artifact's direction, and it
+by −1.4 pp (bootstrap CI −1.5 to −1.3), the era artifact's direction, and it
 vanishes under trend control. Weighting by fame does not rescue the theory. Against
 the demographic births baseline, the naive top-1000 was null all along: 51.4%
 observed vs 52.6% expected (p = 0.47).</p>
@@ -608,13 +608,13 @@ observed vs 52.6% expected (p = 0.47).</p>
 <figure>
   <div class="frame"><img src="figures/fig7_sensitivity.png" alt="Even-decade share as a function of top-N cutoff, staying near or below the pool share"></div>
   <figcaption><b>Fame-threshold sensitivity.</b> Group-A share of the top-N at every
-  cutoff from 50 to the whole pool — below the pool share nearly everywhere (the era
+  cutoff from 50 to the whole pool: below the pool share nearly everywhere (the era
   artifact), never above it.</figcaption>
 </figure>
 
 <figure>
   <div class="frame"><img src="figures/fig8_rolling_rate.png" alt="Rolling rate of greats per million births, 1800 to 1990"></div>
-  <figcaption><b>Greats per million births, 1800–1990.</b> Long waves — a climb into
+  <figcaption><b>Greats per million births, 1800–1990.</b> Long waves: a climb into
   the late 1800s, a peak for the 1920s–30s cohorts, then the recency collapse. No
   alternating decade rhythm anywhere.</figcaption>
 </figure>
@@ -627,7 +627,7 @@ the short version:</p>
 
 <ul class="timeline">
   <li><b>Pre-registration locked.</b> Groups, window, primary test, offset test,
-  decision rule — all before any data. One arithmetic error included free of charge
+  decision rule, all before any data. One arithmetic error included free of charge
   (the window holds 15 even, 14 odd decades), caught later and disclosed.</li>
   <li><b>A newer dataset appeared mid-download.</b> The 2025 Pantheon update was
   found in the same bucket. Kept 2020 as pre-registered primary; 2025 became the
@@ -640,7 +640,7 @@ the short version:</p>
   <li><b>GLM adopted as referee.</b> Trend absorbed by a smooth curve; parity term
   isolated; checked at three polynomial degrees and all ten offsets.</li>
   <li><b>User objection honored: test the apex.</b> GOAT test, escalation curve, and
-  the ancients — designed pro-theory, all null, with the one pro-theory blip
+  the ancients, designed pro-theory, all null, with the one pro-theory blip
   (top-4, 2025, p = 0.046) disclosed rather than hidden.</li>
 </ul>
 
@@ -649,7 +649,7 @@ the short version:</p>
 <div class="tbl"><table>
   <thead><tr><th>Where the theory could have shown up</th><th>Result</th></tr></thead>
   <tbody>
-    <tr><td>Top-1000 of all humanity, trend-controlled</td><td class="v">OR 0.99 — null</td></tr>
+    <tr><td>Top-1000 of all humanity, trend-controlled</td><td class="v">OR 0.99, null</td></tr>
     <tr><td>Every one of 10 decade boundaries</td><td class="v">real boundary unremarkable</td></tr>
     <tr><td>Six fields, from sports to science</td><td class="v">all CIs cross 1</td></tr>
     <tr><td>Every fame cutoff, top-100 → top-50,000</td><td class="v">no pro-even signal</td></tr>
@@ -663,8 +663,8 @@ the short version:</p>
 </table></div>
 
 <p>What <em>is</em> real: an era effect. Greatness per birth cohort moves in long
-waves — the 1940s cohort (Ali, Marley, Merckx, Spielberg), the 1980s football
-generation — and some legendary clusters happen to sit in even decades. A
+waves (the 1940s cohort of Ali, Marley, Merckx, and Spielberg; the 1980s football
+generation), and some legendary clusters happen to sit in even decades. A
 pattern-hungry mind promotes a cluster into a law, keeps the hits, and quietly
 drops Einstein, Babe Ruth, Kobe, and Brady.</p>
 
@@ -678,7 +678,7 @@ better.</p>
 
 <p>The pipeline is one command from raw downloads to every figure on this page:</p>
 
-<p><code>python run.py</code> — fetches Pantheon (2020 + 2025), Wikidata (SPARQL,
+<p><code>python run.py</code> fetches Pantheon (2020 + 2025), Wikidata (SPARQL,
 chunked), the Nobel API, and OWID births/population (~85 MB, cached locally); cleans
 to parquet; runs the full battery (offset, permutation, era-matched both alignments,
 GLM at three degrees and ten offsets, per-field with Benjamini–Hochberg correction,
@@ -702,7 +702,7 @@ population × slowly-varying crude birth rate; it only affects the
 demographic-baseline tests, and parity contrasts are insensitive to smooth baseline
 error. <strong>The Wikidata replication is smaller than planned</strong> (5,126 vs a
 15k–25k target; the sitelink floor of 60 was stricter than estimated).
-<strong>The era-matched test and the GLM were added after first results</strong> —
+<strong>The era-matched test and the GLM were added after first results</strong>,
 disclosed in the decision log, and direction-symmetric: each could have rescued the
 theory exactly as easily as buried it; the pre-registered tests alone already
 refute. <strong>Nothing here speaks to post-1989 cohorts.</strong> The null's
