@@ -86,9 +86,10 @@ Where the top-1000 actually sit in time, against both baselines:
 
 ![Birth decades of the top-1000](figures/fig1_birth_decades.png)
 
-*The top-1000 (bars) tracks neither uniform-births (red dotted) nor the famous pool
-(black): canonization rises to a peak for ~1850–1950 cohorts, then collapses for recent
-births. That trend — not decade parity — turns out to drive every naive "effect" below.*
+*The top-1000 (bars) tracks neither the births-proportional expectation (red dotted)
+nor the famous pool (black): canonization rises to a peak for ~1850–1950 cohorts, then
+collapses for recent births. That trend — not decade parity — drives every naive
+"effect" below.*
 
 ## 3. Act I — the naive test says the theory is *backwards*
 
@@ -108,7 +109,7 @@ So… greatness *avoids* even decades? No. The pre-registered offset test catche
 
 ![Offset test](figures/fig2_offset_test.png)
 
-*Left: the naive "effect" slides smoothly and monotonically across all ten possible
+*Left: the naive "effect" slides smoothly across all ten possible
 decade boundaries (−4.6pp at offset 0 rising to +3.5pp at offset 9). A genuine parity
 effect would make offset 0 a discontinuous outlier; a smooth gradient is the fingerprint
 of a birth-year* trend. *Right: after trend control (§5), no offset does anything.*

@@ -70,7 +70,7 @@ vs 52.6% expected (p = 0.47).
 
 Pre-registered criterion: offset 0 must be the most extreme of the 10 possible decade
 boundaries. Observed: offset 0 ranks 10/10 — the most extreme *negative* delta. But the
-tell is the pattern: the deltas rise smoothly and monotonically from −4.6pp at offset 0
+tell is the pattern: the deltas rise smoothly from −4.6pp at offset 0
 to +3.5pp at offset 9 (fig2, left). A genuine parity effect would make offset 0 a
 discontinuous outlier. A smooth gradient across offsets is the fingerprint of a
 **birth-year trend**, not a parity effect.
@@ -141,7 +141,7 @@ vanishes under trend control. Weighting by fame intensity does not rescue the th
 ### 4.8 Temporal stability
 
 Within every birth half-century, the top-1000's Group A share tracks its era's pool
-share closely and with alternating signs of tiny gaps (e.g. 1700–49: 58.5% vs 62.2%;
+share closely, with small gaps of mixed sign (e.g. 1700–49: 58.5% vs 62.2%;
 1750–99: 40.4% vs 38.4%; 1900–49: 60.6% vs 63.1%). No era shows a consistent parity
 effect.
 

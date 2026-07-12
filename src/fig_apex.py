@@ -36,7 +36,7 @@ def main() -> None:
     ax.set_xticks(x)
     ax.set_xticklabels(tiers)
     ax.set_ylabel("Even-decade share, %")
-    ax.set_xlabel("Rank tier within each of 93 fields")
+    ax.set_xlabel("Rank tier within each field (93 fields; 88 for top-10)")
     ax.set_title("The escalation test: the theory predicts a climb\ntoward the GOAT tier. There is none.", fontsize=10.5)
     ax.legend(fontsize=8, loc="lower left")
 
