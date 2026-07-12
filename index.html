@@ -14,13 +14,11 @@
 <style>
 :root {
   --paper: #ffffff; --ink: #111111; --ink-2: #454545; --muted: #767676;
-  --accent: #111111; --accent-ink: #111111; --red: #111111; --hair: #e3e3e3;
-  --band: rgba(0,0,0,.05); --card: #fafafa; --verdict-bg: #f5f5f5;
+  --hair: #e3e3e3; --band: rgba(0,0,0,.05); --card: #fafafa; --verdict-bg: #f5f5f5;
 }
 @media (prefers-color-scheme: dark) { :root {
   --paper: #111111; --ink: #ececec; --ink-2: #b8b8b8; --muted: #828282;
-  --accent: #ececec; --accent-ink: #ececec; --red: #ececec; --hair: #2c2c2c;
-  --band: rgba(255,255,255,.07); --card: #1a1a1a; --verdict-bg: #1a1a1a;
+  --hair: #2c2c2c; --band: rgba(255,255,255,.07); --card: #1a1a1a; --verdict-bg: #1a1a1a;
 }}
 * { box-sizing: border-box; }
 body {
@@ -31,34 +29,40 @@ body {
 .wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem 5rem; }
 header { padding: 3.5rem 0 2rem; border-bottom: 1px solid var(--hair); }
 .eyebrow { font-family: system-ui, -apple-system, sans-serif; font-size: .72rem;
-  letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink);
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2);
   font-weight: 600; margin: 0 0 .9rem; }
 h1 { font-family: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
   font-size: clamp(2.1rem, 5.5vw, 3.1rem); line-height: 1.08; margin: 0 0 1rem;
   font-weight: 700; letter-spacing: -.01em; text-wrap: balance; }
-.dek { font-size: 1.18rem; color: var(--ink-2); margin: 0;
-  font-style: italic; }
+.dek { font-size: 1.18rem; color: var(--ink-2); margin: 0; font-style: italic; }
 .meta { font-family: system-ui, sans-serif; font-size: .8rem; color: var(--muted);
   margin-top: 1.4rem; }
 h2 { font-family: "Iowan Old Style", Palatino, Georgia, serif;
   font-size: 1.55rem; line-height: 1.2; margin: 3rem 0 .9rem; text-wrap: balance; }
 h2 .act { display: block; font-family: system-ui, sans-serif; font-size: .7rem;
-  letter-spacing: .16em; text-transform: uppercase; color: var(--accent-ink);
+  letter-spacing: .16em; text-transform: uppercase; color: var(--ink-2);
   font-weight: 600; margin-bottom: .45rem; }
+h3 { font-family: system-ui, sans-serif; font-size: .95rem; margin: 2.2rem 0 .6rem;
+  letter-spacing: .02em; }
 p { margin: 0 0 1.1rem; }
 strong { font-weight: 700; }
+.toc { font-family: system-ui, sans-serif; font-size: .86rem; line-height: 2;
+  border: 1px solid var(--hair); border-radius: 6px; padding: 1rem 1.3rem;
+  margin: 2rem 0; background: var(--card); }
+.toc b { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--muted); display: block; margin-bottom: .3rem; }
+.toc a { margin-right: .35rem; }
 .verdict { background: var(--verdict-bg); border: 1px solid var(--hair);
   border-radius: 6px; padding: 1.3rem 1.4rem; margin: 2.2rem 0 0; }
 .verdict .label { font-family: system-ui, sans-serif; font-size: .7rem;
-  letter-spacing: .15em; text-transform: uppercase; color: var(--accent-ink);
+  letter-spacing: .15em; text-transform: uppercase; color: var(--ink-2);
   font-weight: 700; margin-bottom: .5rem; }
 .verdict p { margin: 0; font-size: 1.02rem; }
 .stat-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.6rem 0; }
 .stat { flex: 1 1 10rem; background: var(--card); border: 1px solid var(--hair);
   border-radius: 6px; padding: .95rem 1.05rem; }
 .stat .n { font-family: system-ui, sans-serif; font-variant-numeric: tabular-nums;
-  font-size: 1.7rem; font-weight: 700; line-height: 1.1; color: var(--accent-ink); }
-.stat .n.red { color: var(--red); }
+  font-size: 1.7rem; font-weight: 700; line-height: 1.1; }
 .stat .l { font-family: system-ui, sans-serif; font-size: .76rem;
   color: var(--muted); margin-top: .3rem; line-height: 1.35; }
 figure { margin: 1.9rem -1rem; }
@@ -69,15 +73,15 @@ figure img { display: block; width: 100%; height: auto; border-radius: 3px; }
 figcaption { font-family: system-ui, sans-serif; font-size: .82rem;
   color: var(--muted); margin-top: .6rem; line-height: 1.5; padding: 0 .3rem; }
 figcaption b { color: var(--ink-2); }
-.pull { border-left: 3px solid var(--accent); padding: .2rem 0 .2rem 1.1rem;
+.pull { border-left: 3px solid var(--ink); padding: .2rem 0 .2rem 1.1rem;
   margin: 1.8rem 0; font-size: 1.16rem; font-style: italic; color: var(--ink-2); }
 .names { font-family: system-ui, sans-serif; font-size: .88rem; line-height: 2.1; }
 .chip { display: inline-block; border: 1px solid var(--hair); border-radius: 99px;
   padding: .1rem .65rem; margin: 0 .25rem .25rem 0; background: var(--card);
   white-space: nowrap; }
 .chip .yr { font-variant-numeric: tabular-nums; color: var(--muted); }
-.chip.even { border-color: var(--accent); }
-.chip.even .yr { color: var(--accent-ink); font-weight: 600; }
+.chip.even { border-color: var(--ink); }
+.chip.even .yr { color: var(--ink); font-weight: 600; }
 .tryit { background: var(--card); border: 1px solid var(--hair); border-radius: 6px;
   padding: 1.2rem 1.3rem; margin: 2rem 0; font-family: system-ui, sans-serif; }
 .tryit label { font-size: .72rem; letter-spacing: .13em; text-transform: uppercase;
@@ -85,25 +89,41 @@ figcaption b { color: var(--ink-2); }
 .tryit input { font: inherit; font-variant-numeric: tabular-nums; font-size: 1.05rem;
   width: 7.5rem; padding: .45rem .6rem; border: 1px solid var(--hair);
   border-radius: 5px; background: var(--paper); color: var(--ink); }
-.tryit input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.tryit input:focus { outline: 2px solid var(--ink); outline-offset: 1px; }
 .tryit .out { margin-top: .7rem; font-size: .95rem; min-height: 2.6em;
   color: var(--ink-2); }
-.tryit .out b.even { color: var(--accent-ink); }
-.tryit .out b.odd { color: var(--red); }
-table.tally { border-collapse: collapse; width: 100%; margin: 1.4rem 0;
+.tryit .out b { color: var(--ink); }
+.tbl { overflow-x: auto; margin: 1.4rem 0; }
+table { border-collapse: collapse; width: 100%;
   font-family: system-ui, sans-serif; font-size: .88rem; }
-table.tally th { text-align: left; font-size: .7rem; letter-spacing: .12em;
+th { text-align: left; font-size: .7rem; letter-spacing: .12em;
   text-transform: uppercase; color: var(--muted); font-weight: 600;
-  border-bottom: 1px solid var(--hair); padding: .45rem .6rem .45rem 0; }
-table.tally td { border-bottom: 1px solid var(--hair);
-  padding: .5rem .6rem .5rem 0; font-variant-numeric: tabular-nums; }
-table.tally td.v { font-weight: 600; }
+  border-bottom: 1px solid var(--hair); padding: .45rem .8rem .45rem 0;
+  white-space: nowrap; }
+td { border-bottom: 1px solid var(--hair);
+  padding: .5rem .8rem .5rem 0; font-variant-numeric: tabular-nums; }
+td.v { font-weight: 600; }
+tr.ev td:last-child { font-weight: 700; }
+caption { caption-side: bottom; text-align: left; font-family: system-ui, sans-serif;
+  font-size: .78rem; color: var(--muted); padding-top: .5rem; line-height: 1.5; }
+details { border: 1px solid var(--hair); border-radius: 6px; padding: .9rem 1.2rem;
+  margin: 1.4rem 0; background: var(--card); }
+summary { font-family: system-ui, sans-serif; font-size: .9rem; font-weight: 600;
+  cursor: pointer; }
+details .tbl { max-height: 30rem; overflow-y: auto; }
+.timeline { font-family: system-ui, sans-serif; font-size: .9rem; line-height: 1.6;
+  list-style: none; padding: 0; margin: 1.4rem 0; }
+.timeline li { border-left: 2px solid var(--hair); padding: 0 0 1.1rem 1.2rem;
+  position: relative; }
+.timeline li::before { content: ""; position: absolute; left: -5px; top: .45em;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--ink); }
+.timeline b { display: block; }
 .foot { border-top: 1px solid var(--hair); margin-top: 3.5rem; padding-top: 1.4rem;
   font-family: system-ui, sans-serif; font-size: .84rem; color: var(--muted);
   line-height: 1.7; }
 code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .88em;
   background: var(--band); padding: .1em .35em; border-radius: 4px; }
-a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 2px; }
+a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -128,7 +148,25 @@ a { color: var(--accent-ink); text-decoration: underline; text-underline-offset:
   </div>
 </header>
 
-<h2><span class="act">Act I · The hunch</span>Everyone I could name was even-decade</h2>
+<nav class="toc">
+  <b>Contents</b>
+  <a href="#hunch">The hunch</a> ·
+  <a href="#rules">The rules</a> ·
+  <a href="#act2">First death</a> ·
+  <a href="#act3">Resurrection</a> ·
+  <a href="#referee">The referee</a> ·
+  <a href="#replication">Replications</a> ·
+  <a href="#fields">Per field</a> ·
+  <a href="#goats">The 93 GOATs</a> ·
+  <a href="#ancients">The ancients</a> ·
+  <a href="#robustness">Every other check</a> ·
+  <a href="#timeline">Timeline</a> ·
+  <a href="#scorecard">Scorecard</a> ·
+  <a href="#methods">Methods</a> ·
+  <a href="#limits">Limitations</a>
+</nav>
+
+<h2 id="hunch"><span class="act">Act I · The hunch</span>Everyone I could name was even-decade</h2>
 
 <p>Jordan, 1963. LeBron, 1984. Bolt, 1986. Messi, 1987. Pelé, 1940. Napoleon, 1769.
 Newton, 1643. Call a decade <em>even</em> when its tens digit is even: the 40s, the
@@ -144,88 +182,228 @@ sharpen as I climbed from top-10 lists toward the single greatest of each field.
 <p>The problem: roughly half of everyone is born in an even decade. Seven remembered
 hits is exactly what a memory that keeps confirmations and drops misses would
 produce from pure noise. So instead of collecting more examples, I locked the rules
-first: which data, which test, and what result would count as confirmation or
-refutation, all written down before touching a single birth year. Then I pulled
-88,937 famous people from MIT's Pantheon dataset (fame-scored by Historical
-Popularity Index), a 125,000-person 2025 update, Wikidata, every Nobel laureate
-(990 prize wins), and a world birth-rate baseline so population booms couldn't fake
-anything.</p>
+first.</p>
 
-<h2><span class="act">Act II · First death</span>The data said the theory was backwards</h2>
+<h2 id="rules"><span class="act">Before any data</span>The rules, written down in advance</h2>
+
+<p>Everything gameable was fixed in a
+<a href="https://github.com/Sakshyam-Patro/even-decade-theory/blob/main/PREREGISTRATION.md">pre-registration</a>
+before a single birth year was downloaded:</p>
+
+<p><strong>The bet.</strong> Group A = born in an even decade. Eligibility window:
+births 1700–1989 (older records are unreliable in a way that turns out to matter —
+see <a href="#ancients">the ancients</a> — and post-1989 cohorts haven't had time to
+be canonized). Primary test: the top-1000 most eminent humans vs the full famous
+population, one-sided <em>in the theory's favor</em>. The theory survives only if
+(1)&nbsp;the primary test rejects in the predicted direction, (2)&nbsp;the real decade
+boundary is the most extreme of all 10 possible boundaries, and (3)&nbsp;the direction
+replicates in an independent fame metric.</p>
+
+<div class="tbl"><table>
+  <thead><tr><th>Dataset</th><th>Role</th><th>Eligible (1700–1989)</th><th>Fame metric</th></tr></thead>
+  <tbody>
+    <tr><td>MIT Pantheon 2.0 (2020)</td><td class="v">primary</td><td>67,198</td><td>Historical Popularity Index</td></tr>
+    <tr><td>Pantheon 2025 update</td><td>replication</td><td>91,441</td><td>HPI</td></tr>
+    <tr><td>Wikidata (≥60 language editions)</td><td>replication</td><td>5,126</td><td>sitelink count</td></tr>
+    <tr><td>Nobel laureates (official API)</td><td>sanity check</td><td>990 prize wins</td><td>— (whole list)</td></tr>
+  </tbody>
+  <caption>Two baselines instead of a naive 50/50: the full famous population
+  (internal — documentation and birth-rate confounds cancel) and world births per
+  year (UN 1950+, HYDE population × crude birth rate before).</caption>
+</table></div>
+
+<figure>
+  <div class="frame"><img src="figures/fig1_birth_decades.png" alt="Birth decades of the top-1000 greats vs the famous-pool and births-proportional expectations"></div>
+  <figcaption><b>Where the greats were actually born.</b> The top-1000 (bars) tracks
+  neither the births-proportional expectation (red dotted) nor the famous pool
+  (black): canonization peaks for ~1850–1950 cohorts, then collapses for recent
+  births. Keep this trend in mind — it is the villain of the whole story.</figcaption>
+</figure>
+
+<h2 id="act2"><span class="act">Act II · First death</span>The data said the theory was backwards</h2>
 
 <p>First result, within a day: the top-1000 all-time greats are
-<strong>less</strong> even-decade than the other 66,000 famous people. 51.4% versus
-56.0%, p&nbsp;=&nbsp;0.003. For a moment the data said greatness <em>avoids</em>
-even decades.</p>
+<strong>less</strong> even-decade than the other 66,000 famous people. 514 of 1000
+(51.4%) versus a pool share of 56.0%. The pre-registered pro-theory test fails
+completely (p&nbsp;=&nbsp;0.999); read two-sided, the greats are significantly
+<em>under</em>-represented in even decades (p&nbsp;=&nbsp;0.003). For a moment the
+data said greatness <em>avoids</em> even decades.</p>
 
-<p>The pre-registered kill-shot caught the lie. There are ten possible ways to slice
-years into alternating decades; only one is the real 0-to-9 decade. A genuine decade
-effect should make the real slicing stand out discontinuously. Instead, the
-"effect" slid smoothly across all ten offsets.</p>
+<div class="tbl"><table>
+  <thead><tr><th>Fame cutoff</th><th>Even-decade share</th><th>vs pool 56.0%</th><th>p (two-sided)</th></tr></thead>
+  <tbody>
+    <tr><td>Top-100</td><td>54.0%</td><td>−2.0 pp</td><td>0.69</td></tr>
+    <tr><td>Top-500</td><td>52.2%</td><td>−3.8 pp</td><td>0.087</td></tr>
+    <tr><td class="v">Top-1000 (primary)</td><td class="v">51.4%</td><td class="v">−4.6 pp</td><td class="v">0.003</td></tr>
+    <tr><td>Top-5000</td><td>53.3%</td><td>−2.7 pp</td><td>0.0001</td></tr>
+  </tbody>
+  <caption>The "anti-even" gap holds at every cutoff and in the 1800–1989 and
+  1500–1989 robustness windows. Permutation test: z = −2.95. Bayesian posterior
+  probability that the greats are even-enriched vs this baseline: 0.002.</caption>
+</table></div>
+
+<figure>
+  <div class="frame"><img src="figures/fig3_permutation.png" alt="Permutation null distribution with the observed count of 514 far below the null mean of 560"></div>
+  <figcaption><b>The naive permutation test.</b> 10,000 random top-1000s drawn from
+  the famous pool. The real top-1000 (514 even-decade) sits far below the null mean
+  of 560.</figcaption>
+</figure>
+
+<p>So… greatness avoids even decades? No. The pre-registered kill-shot caught the
+lie. There are exactly ten ways to slice years into alternating decade-parity
+groups — boundary at XX00 (the real decade), XX01, XX02, … XX09. A genuine decade
+effect must make the real boundary a discontinuous outlier. Instead:</p>
+
+<div class="tbl"><table>
+  <thead><tr><th>Boundary offset</th><th>0 (real)</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></thead>
+  <tbody>
+    <tr><td class="v">Naive gap (pp)</td><td class="v">−4.6</td><td>−4.0</td><td>−4.3</td><td>−3.8</td><td>−3.2</td><td>−1.7</td><td>+0.1</td><td>+1.2</td><td>+2.5</td><td>+3.5</td></tr>
+    <tr><td class="v">Trend-controlled z</td><td class="v">−0.16</td><td>−0.13</td><td>−0.91</td><td>−1.19</td><td>−1.35</td><td>−1.07</td><td>−0.45</td><td>−0.31</td><td>−0.20</td><td>0.00</td></tr>
+  </tbody>
+  <caption>The naive gap slides smoothly across all ten offsets — the fingerprint of
+  a birth-year trend, not a parity effect. After trend control, the real boundary
+  ranks a thoroughly unremarkable 3rd of 10 and nothing approaches significance.</caption>
+</table></div>
 
 <figure>
   <div class="frame"><img src="figures/fig2_offset_test.png" alt="Offset test: naive deltas form a smooth gradient across the ten decade boundaries; trend-controlled z-scores are all near zero"></div>
-  <figcaption><b>The offset test.</b> Left: the naive effect slides smoothly across
-  all ten possible decade boundaries — the fingerprint of a birth-year trend, not a
-  decade effect. Right: after trend control, no boundary does anything.</figcaption>
+  <figcaption><b>The offset test.</b> Left: the smooth slide. Right: after trend
+  control, no boundary does anything.</figcaption>
 </figure>
 
 <p>The trend was hiding in plain sight. All-time greats skew old (mean birth year
 1870); the famous pool skews young (mean 1931), because Wikipedia is stuffed with
-athletes and actors born in the 1980s who will never be canonized. The 1980s is an
-even decade. Era was masquerading as parity.</p>
+athletes and actors born in the 1980s who will never be canonized. The 1980s is
+both the pool's largest decade (11,823 people) and an even one. Era was
+masquerading as parity.</p>
 
-<h2><span class="act">Act III · Resurrection</span>Then the theory came back — at z = +2.63</h2>
+<h2 id="act3"><span class="act">Act III · Resurrection</span>Then the theory came back — at z = +2.63</h2>
 
 <p>Fine: control for era. Compare each great only against famous people born in the
-same 20-year window. The result flipped hard: <strong>z&nbsp;=&nbsp;+2.63,
-p&nbsp;=&nbsp;0.005</strong>. Confirmed! For about an hour the Even-Decade Theory
-was empirically alive.</p>
+same 20-year window, so every window holds one even and one odd decade. The result
+flipped hard: <strong>z&nbsp;=&nbsp;+2.63, p&nbsp;=&nbsp;0.005</strong>. Confirmed!
+For about an hour the Even-Decade Theory was empirically alive.</p>
 
-<p>Then I ran one paranoid check. My 20-year windows started on even decades, so the
-even decade was always the <em>older</em> half of each window — and older means more
-canonized, even inside a 20-year block. I shifted every window by exactly ten years
-and re-ran the identical test.</p>
+<p>Then one paranoid check. My 20-year windows started on even decades, so the even
+decade was always the <em>older</em> half of each window — and older means more
+canonized, even inside a 20-year block. Shift every window by exactly ten years and
+re-run the identical test: <strong>z&nbsp;=&nbsp;−2.74</strong>.</p>
 
 <figure>
   <div class="frame"><img src="figures/fig4_mirror_artifact.png" alt="Mirror artifact: the same test yields z=+2.63 with even-aligned blocks and z=-2.74 with odd-aligned blocks"></div>
-  <figcaption><b>The mirror artifact.</b> Same data, same test. Windows aligned to
-  even decades: theory confirmed at +2.63. Windows aligned to odd decades: theory
-  refuted at −2.74. Both are the same trend photographed from two angles.</figcaption>
+  <figcaption><b>The mirror artifact.</b> Same data, same test, one arbitrary
+  alignment choice. Even-first windows: confirmed at +2.63. Odd-first windows:
+  refuted at −2.74. The mirror reproduces in the 2025 dataset (+3.36 / −2.07), so
+  it is structural, not a fluke.</figcaption>
 </figure>
 
 <div class="pull">I now had a publishable p-value in each direction. Both were
 artifacts of one confound wearing two disguises.</div>
 
-<p>The referee that can't be fooled by either disguise: a regression that absorbs
-the entire birth-year trend with a smooth curve, then asks whether any alternating
-even-odd signal remains on top. It doesn't. Odds ratio 0.990, dead center on
-nothing, and it stays null in the 2025 dataset (1.04), in Wikidata (1.06), in every
-one of six fields, in every half-century, and among Nobel laureates.</p>
+<h2 id="referee"><span class="act">The referee</span>A test neither disguise can fool</h2>
+
+<p>Aggregate everyone by birth year, then fit a regression:
+<code>logit P(top-1000 | year) = smooth polynomial(year) + β·[even decade]</code>.
+The polynomial absorbs the canonization trend at every scale; β can only pick up a
+signal that alternates decade-by-decade — which is exactly what the theory claims
+exists.</p>
+
+<div class="tbl"><table>
+  <thead><tr><th>Quantity</th><th>Value</th></tr></thead>
+  <tbody>
+    <tr><td>β (parity coefficient)</td><td>−0.010</td></tr>
+    <tr><td class="v">Odds ratio for even-decade birth</td><td class="v">0.990</td></tr>
+    <tr><td>95% confidence interval</td><td>0.872 – 1.123</td></tr>
+    <tr><td>z / p (two-sided)</td><td>−0.16 / 0.87</td></tr>
+    <tr><td>Stability across polynomial degree 3 / 5 / 8</td><td>z = −0.22 / −0.16 / −0.09</td></tr>
+  </tbody>
+  <caption>With 67,198 people this test had the power to detect a ±13% odds shift.
+  The point estimate is −1%.</caption>
+</table></div>
 
 <div class="stat-row">
   <div class="stat"><div class="n">0.99</div><div class="l">odds ratio for even-decade
   birth, trend-controlled (CI 0.87–1.12)</div></div>
-  <div class="stat"><div class="n red">+2.63 / −2.74</div><div class="l">the two
+  <div class="stat"><div class="n">+2.63 / −2.74</div><div class="l">the two
   opposite "discoveries" the same confound manufactured</div></div>
   <div class="stat"><div class="n">6 / 6</div><div class="l">fields where the effect
   is indistinguishable from zero</div></div>
 </div>
 
-<h2><span class="act">The steelman</span>"But the theory was never about the top-1000. It's about the GOAT."</h2>
+<h2 id="replication"><span class="act">Does it hold up?</span>Three replications and 990 Nobel prizes</h2>
 
-<p>My own strongest objection. So: take the single most eminent person in each of 93
-fields, chosen by the data, not by me. Jordan for basketball. Pelé for soccer. Ali
-for boxing. Einstein for physics. Beethoven for composers. Kant for philosophy.
-Count.</p>
+<div class="tbl"><table>
+  <thead><tr><th>Dataset</th><th>Trend-controlled odds ratio (95% CI)</th><th>z</th><th>Verdict</th></tr></thead>
+  <tbody>
+    <tr><td class="v">Pantheon 2020 (primary)</td><td>0.99 (0.87–1.12)</td><td>−0.16</td><td>null</td></tr>
+    <tr><td>Pantheon 2025</td><td>1.04 (0.92–1.18)</td><td>+0.59</td><td>null</td></tr>
+    <tr><td>Wikidata sitelinks</td><td>1.06 (0.92–1.22)</td><td>+0.82</td><td>null</td></tr>
+  </tbody>
+</table></div>
+
+<div class="tbl"><table>
+  <thead><tr><th>Nobel category</th><th>Even-decade share</th><th>n</th><th>p (two-sided)</th></tr></thead>
+  <tbody>
+    <tr><td>Physics</td><td>54.1%</td><td>229</td><td>0.84</td></tr>
+    <tr><td>Medicine</td><td>53.0%</td><td>232</td><td>0.95</td></tr>
+    <tr><td>Chemistry</td><td>50.5%</td><td>198</td><td>0.43</td></tr>
+    <tr><td>Peace</td><td>57.3%</td><td>110</td><td>0.45</td></tr>
+    <tr><td>Economics</td><td>49.5%</td><td>99</td><td>0.48</td></tr>
+    <tr><td>Literature</td><td>49.2%</td><td>122</td><td>0.36</td></tr>
+  </tbody>
+  <caption>All 990 prize wins together: 52.4% even-decade vs 53.4% expected from the
+  births baseline (p = 0.55). No category deviates.</caption>
+</table></div>
+
+<h2 id="fields"><span class="act">Field by field</span>The Sports scare, and why it evaporated</h2>
+
+<p>The naive per-field numbers hide a beautiful cautionary tale. Sports shows a
+−8.1&nbsp;percentage-point gap that survives multiple-comparison correction — "top
+athletes <em>avoid</em> even decades!" It is the era artifact in miniature: sports
+fame concentrates in recent, even-heavy decades, while the all-time greats skew
+earlier. Control the trend and it evaporates, along with everything else:</p>
+
+<div class="tbl"><table>
+  <thead><tr><th>Domain</th><th>Naive gap (top-500 − pool)</th><th>Trend-controlled OR (95% CI)</th></tr></thead>
+  <tbody>
+    <tr><td>Arts</td><td>+1.7 pp</td><td>1.18 (0.99–1.42)</td></tr>
+    <tr><td>Public Figure</td><td>−1.6 pp</td><td>1.14 (0.90–1.45)</td></tr>
+    <tr><td class="v">Sports</td><td class="v">−8.1 pp ("significant"!)</td><td class="v">1.11 (0.93–1.34)</td></tr>
+    <tr><td>Science &amp; Technology</td><td>+1.0 pp</td><td>1.10 (0.91–1.33)</td></tr>
+    <tr><td>Humanities</td><td>+1.2 pp</td><td>1.10 (0.91–1.32)</td></tr>
+    <tr><td>Institutions</td><td>+1.3 pp</td><td>1.06 (0.88–1.26)</td></tr>
+  </tbody>
+  <caption>Every trend-controlled confidence interval crosses 1. If you squint, all
+  six point estimates lean slightly above 1 — and the pooled estimate is 0.99, which
+  tells you what the squinting is worth.</caption>
+</table></div>
+
+<figure>
+  <div class="frame"><img src="figures/fig5_forest_fields.png" alt="Per-field forest plot: naive gaps vs trend-controlled odds ratios, every CI crossing 1"></div>
+  <figcaption><b>Per-field effects.</b> Left: the naive gaps, with the Sports scare
+  in red. Right: the same fields after trend control.</figcaption>
+</figure>
+
+<figure>
+  <div class="frame"><img src="figures/fig6_heatmap.png" alt="Heatmap of over- and under-representation by decade and field"></div>
+  <figcaption><b>Why the naive numbers wobble.</b> Whole decade-columns move
+  together across every field — eras get over- or under-canonized wholesale. Nothing
+  alternates. Gray cells: too few people to say anything.</figcaption>
+</figure>
+
+<h2 id="goats"><span class="act">The steelman</span>"But the theory was never about the top-1000. It's about the GOAT."</h2>
+
+<p>My own strongest objection, so it got the most careful test. Take the single most
+eminent person in each of 93 fields — chosen by the data, not by me. Jordan for
+basketball. Pelé for soccer. Ali for boxing. Einstein for physics. Beethoven for
+composers. Kant for philosophy. Count.</p>
 
 <figure>
   <div class="frame"><img src="figures/fig9_apex_goats.png" alt="Escalation curve is flat from top-10 to top-1, and the 93 GOATs split 49 even / 44 odd"></div>
   <figcaption><b>The GOAT test.</b> Left: the theory predicts the even-decade share
-  climbs as you approach the top of each field. It is flat, in both datasets. Right:
-  the #1 of all 93 fields — 49 even (blue), 44 odd. One tier in one dataset (top-4,
-  2025) grazes p&nbsp;=&nbsp;0.046: that is 1 of 12 uncorrected tests, unreplicated,
-  and it fades at #1 — a textbook chance blip, disclosed anyway.</figcaption>
+  climbs toward the top of each field. It is flat, in both datasets. Right: the #1
+  of all 93 fields — 49 even (blue), 44 odd, vs 51.4% expected (z = +0.27,
+  p = 0.44).</figcaption>
 </figure>
 
 <p class="names">
@@ -249,37 +427,244 @@ Count.</p>
 <span class="chip">Gates <span class="yr">1955</span></span>
 </p>
 
-<p>This test is also immune to the era problem, because each GOAT is compared only
-against their own field's top-10: Jordan against LeBron and Kareem, never against
-Kant. And the escalation claim — top-10 → 5 → 4 → 3 → 2 → 1, getting stronger — comes
-out flat: 51.0%, 49.9%, 50.8%, 49.5%, 50.0%, 52.7%.</p>
+<p>The escalation claim — the effect should strengthen from top-10 toward the
+single GOAT — comes out flat, and this design is immune to the era problem because
+each GOAT is compared only against their own field's elite (Jordan against LeBron
+and Kareem, never against Kant):</p>
 
-<p>One last trap, discovered on the way to the ancient teachers. Before 500 CE,
-<strong>60% of recorded birth years end in 0</strong> (versus 9% in modern data),
-because ancient years are estimates rounded to round numbers — and a year ending in
-0 always lands in an even decade. Ancient data fakes evidence <em>for</em> the
-theory mechanically. Where years are reliable, the apex ancients split like coins:
-Muhammad, Jesus, Aristotle, Plato, the Buddha odd; Confucius, Moses, Luther even.</p>
+<div class="tbl"><table>
+  <thead><tr><th>Tier (per field)</th><th>top-10</th><th>top-5</th><th>top-4</th><th>top-3</th><th>top-2</th><th>GOAT</th></tr></thead>
+  <tbody>
+    <tr><td class="v">Pantheon 2020</td><td>51.0%</td><td>49.9%</td><td>50.8%</td><td>49.5%</td><td>50.0%</td><td>52.7%</td></tr>
+    <tr><td class="v">Pantheon 2025</td><td>51.8%</td><td>54.5%</td><td>55.3%</td><td>55.0%</td><td>55.3%</td><td>52.1%</td></tr>
+  </tbody>
+  <caption>Expected under the within-field null: ~51.4%. Full disclosure: the 2025
+  top-4 tier grazes p = 0.046 — 1 of 12 uncorrected tests (≈1 expected by chance),
+  unreplicated in the primary data, and it fades at the GOAT tier, exactly where the
+  theory needs it to peak. The top-10 tier covers 88 of the 93 fields (its null
+  needs 20 people per field).</caption>
+</table></div>
 
-<h2><span class="act">Epilogue</span>What was actually true</h2>
+<details>
+  <summary>The full list: all 93 GOATs, their birth years, and their parity</summary>
+  <div class="tbl"><table>
+    <thead><tr><th>Field</th><th>GOAT (highest HPI)</th><th>Born</th><th>Decade</th></tr></thead>
+    <tbody>
+<tr class="ev"><td>Actor</td><td>Charlie Chaplin</td><td>1889</td><td>even</td></tr>
+<tr class="ev"><td>American Football Player</td><td>O. J. Simpson</td><td>1947</td><td>even</td></tr>
+<tr class="ev"><td>Anthropologist</td><td>Bronisław Malinowski</td><td>1884</td><td>even</td></tr>
+<tr class="ev"><td>Archaeologist</td><td>Heinrich Schliemann</td><td>1822</td><td>even</td></tr>
+<tr><td>Architect</td><td>Antoni Gaudí</td><td>1852</td><td>odd</td></tr>
+<tr class="ev"><td>Artist</td><td>Hokusai</td><td>1760</td><td>even</td></tr>
+<tr><td>Astronaut</td><td>Yuri Gagarin</td><td>1934</td><td>odd</td></tr>
+<tr class="ev"><td>Astronomer</td><td>Anders Celsius</td><td>1701</td><td>even</td></tr>
+<tr><td>Athlete</td><td>Jesse Owens</td><td>1913</td><td>odd</td></tr>
+<tr class="ev"><td>Badminton Player</td><td>Lin Dan</td><td>1983</td><td>even</td></tr>
+<tr><td>Baseball Player</td><td>Babe Ruth</td><td>1895</td><td>odd</td></tr>
+<tr class="ev"><td>Basketball Player</td><td>Michael Jordan</td><td>1963</td><td>even</td></tr>
+<tr class="ev"><td>Biologist</td><td>Charles Darwin</td><td>1809</td><td>even</td></tr>
+<tr class="ev"><td>Boxer</td><td>Muhammad Ali</td><td>1942</td><td>even</td></tr>
+<tr><td>Businessperson</td><td>Bill Gates</td><td>1955</td><td>odd</td></tr>
+<tr><td>Celebrity</td><td>Wallis Simpson</td><td>1896</td><td>odd</td></tr>
+<tr class="ev"><td>Chemist</td><td>Louis Pasteur</td><td>1822</td><td>even</td></tr>
+<tr class="ev"><td>Chess Player</td><td>Bobby Fischer</td><td>1943</td><td>even</td></tr>
+<tr class="ev"><td>Coach</td><td>Alex Ferguson</td><td>1941</td><td>even</td></tr>
+<tr><td>Comedian</td><td>Robin Williams</td><td>1951</td><td>odd</td></tr>
+<tr class="ev"><td>Comic Artist</td><td>Stan Lee</td><td>1922</td><td>even</td></tr>
+<tr><td>Companion</td><td>Empress Elisabeth of Austria</td><td>1837</td><td>odd</td></tr>
+<tr><td>Composer</td><td>Ludwig van Beethoven</td><td>1770</td><td>odd</td></tr>
+<tr><td>Computer Scientist</td><td>Alan Turing</td><td>1912</td><td>odd</td></tr>
+<tr class="ev"><td>Conductor</td><td>Herbert von Karajan</td><td>1908</td><td>even</td></tr>
+<tr class="ev"><td>Cricketer</td><td>Don Bradman</td><td>1908</td><td>even</td></tr>
+<tr class="ev"><td>Cyclist</td><td>Eddy Merckx</td><td>1945</td><td>even</td></tr>
+<tr><td>Dancer</td><td>Mata Hari</td><td>1876</td><td>odd</td></tr>
+<tr><td>Designer</td><td>Steve Jobs</td><td>1955</td><td>odd</td></tr>
+<tr><td>Diplomat</td><td>Kofi Annan</td><td>1938</td><td>odd</td></tr>
+<tr><td>Economist</td><td>Karl Marx</td><td>1818</td><td>odd</td></tr>
+<tr><td>Engineer</td><td>Gustave Eiffel</td><td>1832</td><td>odd</td></tr>
+<tr class="ev"><td>Explorer</td><td>James Cook</td><td>1728</td><td>even</td></tr>
+<tr><td>Extremist</td><td>Jack the Ripper</td><td>1850</td><td>odd</td></tr>
+<tr class="ev"><td>Fashion Designer</td><td>Coco Chanel</td><td>1883</td><td>even</td></tr>
+<tr><td>Fencer</td><td>Nedo Nadi</td><td>1894</td><td>odd</td></tr>
+<tr class="ev"><td>Film Director</td><td>Steven Spielberg</td><td>1946</td><td>even</td></tr>
+<tr><td>Game Designer</td><td>Shigeru Miyamoto</td><td>1952</td><td>odd</td></tr>
+<tr class="ev"><td>Geographer</td><td>Alexander von Humboldt</td><td>1769</td><td>even</td></tr>
+<tr class="ev"><td>Geologist</td><td>Alfred Wegener</td><td>1880</td><td>even</td></tr>
+<tr class="ev"><td>Golfer</td><td>Jack Nicklaus</td><td>1940</td><td>even</td></tr>
+<tr class="ev"><td>Gymnast</td><td>Nadia Comăneci</td><td>1961</td><td>even</td></tr>
+<tr class="ev"><td>Handball Player</td><td>Gheorghe Gruia</td><td>1940</td><td>even</td></tr>
+<tr class="ev"><td>Historian</td><td>Alexis de Tocqueville</td><td>1805</td><td>even</td></tr>
+<tr><td>Hockey Player</td><td>Viktor Tikhonov</td><td>1930</td><td>odd</td></tr>
+<tr class="ev"><td>Inventor</td><td>Thomas Edison</td><td>1847</td><td>even</td></tr>
+<tr><td>Journalist</td><td>Robert Capa</td><td>1913</td><td>odd</td></tr>
+<tr><td>Judge</td><td>Giovanni Falcone</td><td>1939</td><td>odd</td></tr>
+<tr><td>Lawyer</td><td>J. Edgar Hoover</td><td>1895</td><td>odd</td></tr>
+<tr><td>Linguist</td><td>Ferdinand de Saussure</td><td>1857</td><td>odd</td></tr>
+<tr class="ev"><td>Mafioso</td><td>Pablo Escobar</td><td>1949</td><td>even</td></tr>
+<tr><td>Magician</td><td>Harry Houdini</td><td>1874</td><td>odd</td></tr>
+<tr><td>Martial Arts</td><td>Ip Man</td><td>1893</td><td>odd</td></tr>
+<tr><td>Mathematician</td><td>Carl Friedrich Gauss</td><td>1777</td><td>odd</td></tr>
+<tr><td>Military Personnel</td><td>Charles de Gaulle</td><td>1890</td><td>odd</td></tr>
+<tr class="ev"><td>Model</td><td>Behati Prinsloo</td><td>1988</td><td>even</td></tr>
+<tr><td>Mountaineer</td><td>Edmund Hillary</td><td>1919</td><td>odd</td></tr>
+<tr class="ev"><td>Musician</td><td>Bob Marley</td><td>1945</td><td>even</td></tr>
+<tr class="ev"><td>Nobleman</td><td>Elizabeth II</td><td>1926</td><td>even</td></tr>
+<tr><td>Occultist</td><td>Rajneesh</td><td>1931</td><td>odd</td></tr>
+<tr><td>Painter</td><td>Vincent van Gogh</td><td>1853</td><td>odd</td></tr>
+<tr class="ev"><td>Philosopher</td><td>Immanuel Kant</td><td>1724</td><td>even</td></tr>
+<tr class="ev"><td>Photographer</td><td>Nadar</td><td>1820</td><td>even</td></tr>
+<tr class="ev"><td>Physician</td><td>Florence Nightingale</td><td>1820</td><td>even</td></tr>
+<tr><td>Physicist</td><td>Albert Einstein</td><td>1879</td><td>odd</td></tr>
+<tr class="ev"><td>Pilot</td><td>Charles Lindbergh</td><td>1902</td><td>even</td></tr>
+<tr><td>Poker Player</td><td>Doyle Brunson</td><td>1933</td><td>odd</td></tr>
+<tr class="ev"><td>Political Scientist</td><td>Zygmunt Bauman</td><td>1925</td><td>even</td></tr>
+<tr class="ev"><td>Politician</td><td>Napoleon</td><td>1769</td><td>even</td></tr>
+<tr><td>Pornographic Actor</td><td>Ilona Staller</td><td>1951</td><td>odd</td></tr>
+<tr><td>Presenter</td><td>Jay Leno</td><td>1950</td><td>odd</td></tr>
+<tr class="ev"><td>Producer</td><td>Walt Disney</td><td>1901</td><td>even</td></tr>
+<tr><td>Psychologist</td><td>Sigmund Freud</td><td>1856</td><td>odd</td></tr>
+<tr><td>Public Worker</td><td>Alois Hitler</td><td>1837</td><td>odd</td></tr>
+<tr class="ev"><td>Racing Driver</td><td>Niki Lauda</td><td>1949</td><td>even</td></tr>
+<tr class="ev"><td>Referee</td><td>Pierluigi Collina</td><td>1960</td><td>even</td></tr>
+<tr><td>Religious Figure</td><td>Pope Francis</td><td>1936</td><td>odd</td></tr>
+<tr><td>Rugby Player</td><td>Jonah Lomu</td><td>1975</td><td>odd</td></tr>
+<tr class="ev"><td>Sculptor</td><td>Auguste Rodin</td><td>1840</td><td>even</td></tr>
+<tr><td>Singer</td><td>Elvis Presley</td><td>1935</td><td>odd</td></tr>
+<tr><td>Skater</td><td>Sonja Henie</td><td>1912</td><td>odd</td></tr>
+<tr><td>Skier</td><td>Ingemar Stenmark</td><td>1956</td><td>odd</td></tr>
+<tr><td>Snooker</td><td>Ronnie O'Sullivan</td><td>1975</td><td>odd</td></tr>
+<tr class="ev"><td>Soccer Player</td><td>Pelé</td><td>1940</td><td>even</td></tr>
+<tr class="ev"><td>Social Activist</td><td>Che Guevara</td><td>1928</td><td>even</td></tr>
+<tr class="ev"><td>Sociologist</td><td>Max Weber</td><td>1864</td><td>even</td></tr>
+<tr class="ev"><td>Swimmer</td><td>Johnny Weissmuller</td><td>1904</td><td>even</td></tr>
+<tr class="ev"><td>Table Tennis Player</td><td>Jan-Ove Waldner</td><td>1965</td><td>even</td></tr>
+<tr><td>Tennis Player</td><td>Björn Borg</td><td>1956</td><td>odd</td></tr>
+<tr class="ev"><td>Volleyball Player</td><td>Karch Kiraly</td><td>1960</td><td>even</td></tr>
+<tr><td>Wrestler</td><td>Hulk Hogan</td><td>1953</td><td>odd</td></tr>
+<tr class="ev"><td>Writer</td><td>Johann Wolfgang von Goethe</td><td>1749</td><td>even</td></tr>
+<tr class="ev"><td>Youtuber</td><td>PewDiePie</td><td>1989</td><td>even</td></tr>
+    </tbody>
+    <caption>Selected purely by Historical Popularity Index within each Pantheon
+    occupation — no human curation. Bold = even decade. Disagree with a pick? That's
+    the point of publishing the list: swap in your own GOATs and recount — a handful
+    of substitutions cannot move 49-of-93 anywhere interesting.</caption>
+  </table></div>
+</details>
 
-<p>Greats really do cluster in time — just by era, not by decade digit. Whole
-generations get over-canonized together in long waves: the 1940s cohort (Ali,
-Marley, Merckx, Spielberg), the 1980s football generation. Some legendary clusters
-happen to sit in even decades, and a pattern-hungry mind promotes a cluster into a
-law. Meanwhile memory quietly drops Einstein, Babe Ruth, Kobe, and Brady.</p>
+<h2 id="ancients"><span class="act">The oldest trap</span>Why the ancients can't testify</h2>
 
-<table class="tally">
+<p>I wanted the great religious teachers and philosophers in the test — Newton
+(1643) and the ancients were part of the original hunch. But the recorded birth
+years of antiquity carry a fatal artifact: they are <em>estimates rounded to round
+numbers</em>, and a year ending in 0 always lands in an even decade.</p>
+
+<div class="tbl"><table>
+  <thead><tr><th>Birth era</th><th>n</th><th>Years ending in 0</th><th>Even-decade share</th></tr></thead>
+  <tbody>
+    <tr><td>800 BCE – 500 CE</td><td>2,756</td><td class="v">59.9%</td><td>57.9%</td></tr>
+    <tr><td>500 – 1200</td><td>2,910</td><td>38.1%</td><td>52.8%</td></tr>
+    <tr><td>1200 – 1500</td><td>2,388</td><td>25.1%</td><td>49.4%</td></tr>
+    <tr><td>1500 – 1700</td><td>2,799</td><td>13.8%</td><td>51.1%</td></tr>
+    <tr><td>1700 – 1989</td><td>66,050</td><td>9.4%</td><td>55.3%*</td></tr>
+  </tbody>
+  <caption>*Inflated by the window holding 15 even but 14 odd decades — a
+  pre-registration arithmetic slip, disclosed in the decision log, which the
+  internal baseline absorbs. The rounding gradient is the real story: ancient data
+  fakes evidence FOR the theory mechanically, and the share of round years falls
+  exactly as record-keeping improves.</caption>
+</table></div>
+
+<p>Where the years are believed reliable, the apex ancients split like coins:
+Muhammad (570), Jesus, Aristotle, Plato, and the Buddha are odd-decade; Confucius,
+Moses, and Luther are even.</p>
+
+<h2 id="robustness"><span class="act">Leaving no exit</span>Every other place the theory could hide</h2>
+
+<h3>Across time</h3>
+<div class="tbl"><table>
+  <thead><tr><th>Birth half-century</th><th>Top-1000 members</th><th>Their even share</th><th>Era's pool share</th></tr></thead>
+  <tbody>
+    <tr><td>1700–1749</td><td>65</td><td>58.5%</td><td>62.2%</td></tr>
+    <tr><td>1750–1799</td><td>99</td><td>40.4%</td><td>38.4%</td></tr>
+    <tr><td>1800–1849</td><td>153</td><td>56.2%</td><td>58.7%</td></tr>
+    <tr><td>1850–1899</td><td>267</td><td>39.7%</td><td>40.8%</td></tr>
+    <tr><td>1900–1949</td><td>388</td><td>60.6%</td><td>63.1%</td></tr>
+    <tr><td>1950–1989</td><td>28</td><td>32.1%</td><td>56.2%</td></tr>
+  </tbody>
+  <caption>The greats track their own era's parity mix everywhere; the last row's
+  gap rests on just 28 people. Note how the pool share itself swings from 38% to
+  63% by era — that swing, not parity, is what every naive test keeps rediscovering.</caption>
+</table></div>
+
+<h3>Across fame intensity</h3>
+<p>Weighting every eligible person by their fame score shifts the even-decade share
+by −1.4 pp (bootstrap CI −1.5 to −1.3) — the era artifact's direction, and it
+vanishes under trend control. Weighting by fame does not rescue the theory. Against
+the demographic births baseline, the naive top-1000 was null all along: 51.4%
+observed vs 52.6% expected (p = 0.47).</p>
+
+<figure>
+  <div class="frame"><img src="figures/fig7_sensitivity.png" alt="Even-decade share as a function of top-N cutoff, staying near or below the pool share"></div>
+  <figcaption><b>Fame-threshold sensitivity.</b> Group-A share of the top-N at every
+  cutoff from 50 to the whole pool — below the pool share nearly everywhere (the era
+  artifact), never above it.</figcaption>
+</figure>
+
+<figure>
+  <div class="frame"><img src="figures/fig8_rolling_rate.png" alt="Rolling rate of greats per million births, 1800 to 1990"></div>
+  <figcaption><b>Greats per million births, 1800–1990.</b> Long waves — a climb into
+  the late 1800s, a peak for the 1920s–30s cohorts, then the recency collapse. No
+  alternating decade rhythm anywhere.</figcaption>
+</figure>
+
+<h2 id="timeline"><span class="act">How the sausage was made</span>Every judgment call, in order</h2>
+
+<p>The full log lives in
+<a href="https://github.com/Sakshyam-Patro/even-decade-theory/blob/main/DECISIONS.md">DECISIONS.md</a>;
+the short version:</p>
+
+<ul class="timeline">
+  <li><b>Pre-registration locked.</b> Groups, window, primary test, offset test,
+  decision rule — all before any data. One arithmetic error included free of charge
+  (the window holds 15 even, 14 odd decades), caught later and disclosed.</li>
+  <li><b>A newer dataset appeared mid-download.</b> The 2025 Pantheon update was
+  found in the same bucket. Kept 2020 as pre-registered primary; 2025 became the
+  replication.</li>
+  <li><b>First run: theory backwards.</b> The offset test's smooth gradient
+  diagnosed a trend, not parity.</li>
+  <li><b>Era-matched fix: theory confirmed.</b> z = +2.63. Then the alignment flip
+  produced z = −2.74 and exposed the within-window gradient. Both results demoted
+  from "evidence" to "exhibit."</li>
+  <li><b>GLM adopted as referee.</b> Trend absorbed by a smooth curve; parity term
+  isolated; checked at three polynomial degrees and all ten offsets.</li>
+  <li><b>User objection honored: test the apex.</b> GOAT test, escalation curve, and
+  the ancients — designed pro-theory, all null, with the one pro-theory blip
+  (top-4, 2025, p = 0.046) disclosed rather than hidden.</li>
+</ul>
+
+<h2 id="scorecard"><span class="act">Epilogue</span>The scorecard, and what was actually true</h2>
+
+<div class="tbl"><table>
   <thead><tr><th>Where the theory could have shown up</th><th>Result</th></tr></thead>
   <tbody>
     <tr><td>Top-1000 of all humanity, trend-controlled</td><td class="v">OR 0.99 — null</td></tr>
-    <tr><td>Every one of 10 decade boundaries</td><td class="v">offset 0 unremarkable</td></tr>
+    <tr><td>Every one of 10 decade boundaries</td><td class="v">real boundary unremarkable</td></tr>
     <tr><td>Six fields, from sports to science</td><td class="v">all CIs cross 1</td></tr>
-    <tr><td>990 Nobel prize wins</td><td class="v">52.4% vs 53.4% expected</td></tr>
+    <tr><td>Every fame cutoff, top-100 → top-50,000</td><td class="v">no pro-even signal</td></tr>
+    <tr><td>Every birth half-century, 1700–1989</td><td class="v">tracks its era's baseline</td></tr>
+    <tr><td>990 Nobel prize wins, 6 categories</td><td class="v">52.4% vs 53.4% expected</td></tr>
     <tr><td>The #1 GOAT of 93 fields</td><td class="v">49 even / 44 odd</td></tr>
-    <tr><td>Escalation toward the top</td><td class="v">flat</td></tr>
+    <tr><td>Escalation from top-10 to top-1</td><td class="v">flat</td></tr>
+    <tr><td>Fame-intensity weighting</td><td class="v">artifact only</td></tr>
+    <tr><td>Three independent fame metrics</td><td class="v">OR 0.99 / 1.04 / 1.06</td></tr>
   </tbody>
-</table>
+</table></div>
+
+<p>What <em>is</em> real: an era effect. Greatness per birth cohort moves in long
+waves — the 1940s cohort (Ali, Marley, Merckx, Spielberg), the 1980s football
+generation — and some legendary clusters happen to sit in even decades. A
+pattern-hungry mind promotes a cluster into a law, keeps the hits, and quietly
+drops Einstein, Babe Ruth, Kobe, and Brady.</p>
 
 <p>The bigger lesson is the mirror: the same dataset handed me a significant result
 in <em>both directions</em> before it told the truth. If I had stopped at either
@@ -287,58 +672,45 @@ point, I would have written a confident, chart-filled, wrong blog post. The
 pre-registered offset test saved me twice. The theory was fun. The autopsy was
 better.</p>
 
-<h2><span class="act">Appendix</span>The full evidence, chart by chart</h2>
+<h2 id="methods"><span class="act">Kick the tires</span>Methods, data, reproduction</h2>
 
-<figure>
-  <div class="frame"><img src="figures/fig1_birth_decades.png" alt="Birth decades of the top-1000 greats vs the famous-pool and births-proportional expectations" loading="lazy"></div>
-  <figcaption><b>Where the greats were born.</b> The top-1000 (bars) tracks neither
-  the births-proportional expectation (red dotted) nor the famous pool (black):
-  canonization peaks for ~1850–1950 cohorts, then collapses for recent births. This
-  trend drives every naive "effect" above.</figcaption>
-</figure>
+<p>The pipeline is one command from raw downloads to every figure on this page:</p>
 
-<figure>
-  <div class="frame"><img src="figures/fig3_permutation.png" alt="Permutation null distribution with the observed count of 514 far below the null mean of 560" loading="lazy"></div>
-  <figcaption><b>The naive permutation test.</b> 10,000 random top-1000s drawn from
-  the famous pool. The real top-1000 (514 even-decade) sits far below the null mean
-  (560) — the "backwards" result of Act II, before trend control.</figcaption>
-</figure>
+<p><code>python run.py</code> — fetches Pantheon (2020 + 2025), Wikidata (SPARQL,
+chunked), the Nobel API, and OWID births/population (~85 MB, cached locally); cleans
+to parquet; runs the full battery (offset, permutation, era-matched both alignments,
+GLM at three degrees and ten offsets, per-field with Benjamini–Hochberg correction,
+Bayesian beta-binomial, fame-weighted bootstrap, temporal splits, GOAT/escalation/
+ancients); and renders all nine figures. Every random draw is seeded, so every
+number here reproduces exactly. The cleaned parquets are committed, so you can skip
+the downloads and go straight to <code>src/analysis.py</code>.</p>
 
-<figure>
-  <div class="frame"><img src="figures/fig5_forest_fields.png" alt="Per-field forest plot: naive gaps vs trend-controlled odds ratios, every CI crossing 1" loading="lazy"></div>
-  <figcaption><b>Per-field effects.</b> Left: naive gaps — Sports even reaches
-  "significance" (red). Right: the same fields trend-controlled — every confidence
-  interval crosses 1. The Sports scare was era confounding in miniature.</figcaption>
-</figure>
+<p>Full formal write-up:
+<a href="https://github.com/Sakshyam-Patro/even-decade-theory/blob/main/output/REPORT.md">REPORT.md</a> ·
+every statistic: <a href="https://github.com/Sakshyam-Patro/even-decade-theory/blob/main/output/results.json">results.json</a> ·
+pre-registration: <a href="https://github.com/Sakshyam-Patro/even-decade-theory/blob/main/PREREGISTRATION.md">PREREGISTRATION.md</a></p>
 
-<figure>
-  <div class="frame"><img src="figures/fig6_heatmap.png" alt="Heatmap of over- and under-representation by decade and field" loading="lazy"></div>
-  <figcaption><b>Decade × field heatmap.</b> Whole decade-columns move together
-  across every field — eras get over- or under-canonized wholesale. Nothing
-  alternates. Gray cells: too few people to say anything.</figcaption>
-</figure>
+<h2 id="limits"><span class="act">Honestly</span>Limitations</h2>
 
-<figure>
-  <div class="frame"><img src="figures/fig7_sensitivity.png" alt="Even-decade share as a function of top-N cutoff, staying near or below the pool share" loading="lazy"></div>
-  <figcaption><b>Fame-threshold sensitivity.</b> Group-A share of the top-N at every
-  cutoff from 50 to the whole pool. The elite run <em>below</em> the pool share —
-  the era artifact — and nowhere does a pro-even signal appear.</figcaption>
-</figure>
-
-<figure>
-  <div class="frame"><img src="figures/fig8_rolling_rate.png" alt="Rolling rate of greats per million births, 1800 to 1990" loading="lazy"></div>
-  <figcaption><b>Greats per million births.</b> Long waves — a rise into the late
-  1800s, a peak for the 1920s–30s cohorts, then the recency collapse. No alternating
-  decade rhythm anywhere.</figcaption>
-</figure>
+<p><strong>Fame is not greatness.</strong> HPI and sitelinks measure
+Wikipedia-mediated memory, which is Western- and recency-skewed. But a parity
+<em>law</em> must show up in any reasonable eminence metric; it shows up in none of
+three. <strong>The pre-1950 births baseline</strong> approximates births as
+population × slowly-varying crude birth rate; it only affects the
+demographic-baseline tests, and parity contrasts are insensitive to smooth baseline
+error. <strong>The Wikidata replication is smaller than planned</strong> (5,126 vs a
+15k–25k target; the sitelink floor of 60 was stricter than estimated).
+<strong>The era-matched test and the GLM were added after first results</strong> —
+disclosed in the decision log, and direction-symmetric: each could have rescued the
+theory exactly as easily as buried it; the pre-registered tests alone already
+refute. <strong>Nothing here speaks to post-1989 cohorts.</strong> The null's
+prediction: they will coin-flip too.</p>
 
 <div class="foot">
-  <p>Reproduce everything from raw downloads to every figure:
-  <code>python run.py</code> · data: MIT Pantheon 2.0 (2020 + 2025), Wikidata,
-  Nobel Prize API, UN/HYDE world births · pre-registration, decision log, full
-  methods and all robustness checks:
+  <p>Sakshyam Patro · July 2026 ·
   <a href="https://github.com/Sakshyam-Patro/even-decade-theory">github.com/Sakshyam-Patro/even-decade-theory</a>
-  · full report: <a href="https://github.com/Sakshyam-Patro/even-decade-theory/blob/main/output/REPORT.md">REPORT.md</a></p>
+  · data: MIT Pantheon 2.0 (2020 + 2025), Wikidata, Nobel Prize API, UN/HYDE world
+  births · reproduce with <code>python run.py</code></p>
 </div>
 
 </div>
@@ -365,8 +737,7 @@ better.</p>
     var tens = Math.floor(y / 10) % 10;
     var even = tens % 2 === 0;
     var m = mates[tens] || [];
-    out.innerHTML = y + " → the " + tens + "0s → <b class=\"" +
-      (even ? "even" : "odd") + "\">" + (even ? "EVEN" : "odd") +
+    out.innerHTML = y + " → the " + tens + "0s → <b>" + (even ? "EVEN" : "odd") +
       " decade</b>. Same parity as " + m.slice(0, 3).join(", ") +
       ". Effect on your odds of greatness: none (OR 0.99).";
   });
